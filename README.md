@@ -4,7 +4,7 @@ ScalaFx Form
 
 Model
 -----
-* Form 1 --> Fields 1 <>--> * Field
+* Form 1 --> Fields 1 --> * Field 1 --> Validator
 
 Build
 -----
