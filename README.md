@@ -4,8 +4,7 @@ ScalaFx Form
 
 Model
 -----
-* Form 1 --> Fields 1 --> * Field
-* Field 1 --> 1 Label, Region, Validator
+* Form 1 --> * Field 1 --> 1 Label, Region, Validator
 
 Build
 -----
