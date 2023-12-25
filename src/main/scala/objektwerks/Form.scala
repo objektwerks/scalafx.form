@@ -4,6 +4,12 @@ import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{GridPane, Region}
 
+final case class Validator()
+
+final case class Field(validator: Validator)
+
+final case class Fields(fields: List[Field])
+
 final class Form(controls: List[(String, Region)]) extends GridPane:
   hgap = 6
   vgap = 6
