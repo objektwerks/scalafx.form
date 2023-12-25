@@ -8,4 +8,4 @@ Build
 
 Run
 ---
-1. sbt run
+1. sbt clean run
