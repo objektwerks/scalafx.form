@@ -16,7 +16,6 @@ final class Form(fields: List[Field]) extends GridPane:
   padding = Insets(top = 6, right = 6, bottom = 6, left = 6)
   var row = 0
   for (field <- fields)
-    val columnLabel = field.label
-    add(columnLabel, columnIndex = 0, rowIndex = row)
+    add(field.label, columnIndex = 0, rowIndex = row)
     add(field.control, columnIndex = 1, rowIndex = row)
     row += 1
