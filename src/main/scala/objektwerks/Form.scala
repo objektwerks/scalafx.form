@@ -4,7 +4,7 @@ import scalafx.geometry.Insets
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{GridPane, Region}
 
-final case class Validator()
+final class Validator()
 
 final case class Field(label: Label,
                        component: Region,
