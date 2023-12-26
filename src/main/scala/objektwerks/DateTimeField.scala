@@ -48,15 +48,13 @@ private final class PopupView(localDateTime: LocalDateTime,
   val daySpinner = Spinner[Int](min = 1, max = 31, initialValue = localDateTime.getDayOfMonth, amountToStepBy = 1)
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localDateTime.getHour, amountToStepBy = 1)
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localDateTime.getMinute, amountToStepBy = 1)
-  val secondSpinner = Spinner[Int](min = 0, max = 59, initialValue = localDateTime.getSecond, amountToStepBy = 1)
 
   val controls = List[(String, Spinner[Int])](
     "Year:" -> yearSpinner,
     "Month:" -> monthSpinner,
     "Time:" -> daySpinner,
     "Hour:" -> hourSpinner,
-    "Minute:" -> minuteSpinner,
-    "Second:" -> secondSpinner
+    "Minute:" -> minuteSpinner
   )
 
   val selector = buildGridPane(controls)
@@ -80,8 +78,7 @@ private final class PopupView(localDateTime: LocalDateTime,
         monthSpinner.value.value,
         daySpinner.value.value,
         hourSpinner.value.value,
-        minuteSpinner.value.value,
-        secondSpinner.value.value
+        minuteSpinner.value.value
       )
 
   private def buildGridPane(controls: List[(String, Spinner[Int])]): GridPane =
