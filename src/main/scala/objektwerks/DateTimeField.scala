@@ -9,7 +9,7 @@ import scalafx.scene.control.{Button, Label, Spinner}
 import scalafx.scene.layout.{GridPane, HBox, Priority, VBox}
 import scalafx.stage.Popup
 
-final class DateTimeSelector(localDateTime: LocalDateTime) extends HBox:
+final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
   spacing = 3
   padding = Insets(3)
 
