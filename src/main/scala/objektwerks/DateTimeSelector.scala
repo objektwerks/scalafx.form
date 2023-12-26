@@ -1,6 +1,7 @@
 package objektwerks
 
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 import scalafx.beans.property.ObjectProperty
 import scalafx.geometry.{Insets, Pos}
@@ -14,9 +15,11 @@ final class DateTimeSelector(localDateTime: LocalDateTime) extends HBox:
 
   val value: ObjectProperty[LocalDateTime] = ObjectProperty(localDateTime)
 
+  def format(localDateTime: LocalDateTime): String = localDateTime.format(DateTimeFormatter.ISO_DATE_TIME)
+
   private val localDateTimeLabel = new Label:
     alignment = Pos.CENTER_LEFT
-    text = Entity.format(localDateTime)
+    text = format(localDateTime)
 
   private val localDateTimeButton = new Button:
     text = "..."
@@ -35,7 +38,7 @@ final class DateTimeSelector(localDateTime: LocalDateTime) extends HBox:
 
   private def popupValue(popupLocalDateTime: LocalDateTime): Unit =
     value.value = popupLocalDateTime
-    localDateTimeLabel.text = Entity.format(popupLocalDateTime)
+    localDateTimeLabel.text = format(popupLocalDateTime)
 
 private final class PopupView(localDateTime: LocalDateTime,
                               popup: Popup,
