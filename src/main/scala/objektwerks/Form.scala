@@ -7,7 +7,7 @@ import scalafx.scene.layout.{GridPane, Region}
 final class Validator()
 
 final case class Field(label: Label,
-                       component: Region,
+                       control: Region,
                        validator: Validator)
 
 final class Form(fields: List[Field]) extends GridPane:
