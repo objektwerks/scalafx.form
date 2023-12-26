@@ -5,7 +5,6 @@ scalaVersion := "3.4.0-RC1"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "21.0.0-R32",
-    "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
     "ch.qos.logback" % "logback-classic" % "1.4.14"
   )
 }
