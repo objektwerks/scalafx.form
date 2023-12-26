@@ -18,5 +18,5 @@ final class Form(fields: List[Field]) extends GridPane:
   for (field <- fields)
     val columnLabel = field.label
     add(columnLabel, columnIndex = 0, rowIndex = row)
-    add(field.component, columnIndex = 1, rowIndex = row)
+    add(field.control, columnIndex = 1, rowIndex = row)
     row += 1
