@@ -20,7 +20,7 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
   def format(localDateTime: LocalDateTime): String = formatter.format(localDateTime)
 
   private val localDateTimeLabel = new Label:
-    alignment = Pos.CENTER_LEFT
+    alignment = Pos.BASELINE_LEFT
     text = format(localDateTime)
 
   private val localDateTimeButton = new Button:
