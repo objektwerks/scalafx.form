@@ -2,14 +2,15 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.scene.control.{ComboBox, Label}
-import scalafx.geometry.Insets
+import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.layout.{Priority, VBox}
 
 import java.time.LocalDateTime
 
 final class FormPane extends VBox:
-  spacing = 6
+  alignment = Pos.CENTER
   padding = Insets(6)
+  spacing = 6
   
   val intLabel = Label("Int Field:")
   
