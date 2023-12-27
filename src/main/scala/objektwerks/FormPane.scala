@@ -13,23 +13,19 @@ final class FormPane extends VBox:
   spacing = 6
   
   val intLabel = Label("Int Field:")
-  
   val intTextField = new IntTextField:
     text = "1"
 
   val doubleLabel = Label("Double Field:")
-
   val doubleTextField = new DoubleTextField:
     text = "1.1"
 
   val comboLabel = Label("ComboBox:")
-
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from( List("abc", "def", "ghi") )
   	value = "abc"
 
   val dateTimeLabel = Label("Date Time Field:")
-
   val dateTimeField = new DateTimeField( LocalDateTime.now )
 
   val fields = List(
