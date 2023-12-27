@@ -1,8 +1,10 @@
 package objektwerks
 
-import scalafx.scene.control.Label
+import scalafx.collections.ObservableBuffer
+import scalafx.scene.control.{ComboBox, Label}
 import scalafx.geometry.Insets
 import scalafx.scene.layout.{Priority, VBox}
+
 import java.time.LocalDateTime
 
 final class FormPane extends VBox:
@@ -20,6 +22,11 @@ final class FormPane extends VBox:
 
   val doubleTextField = new DoubleTextField:
     text = "1.1"
+
+  val comboBox = new ComboBox[String]:
+  	items = ObservableBuffer.from( List("a", "b", "c") )
+  	value = "a"
+  comboBox.prefWidth = 100
 
   val dateTimeLabel = new Label:
     text = "Date Time Field:"
