@@ -21,6 +21,7 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
 
   private val localDateTimeLabel = new Label:
     alignment = Pos.BASELINE_LEFT
+    prefHeight = 26.0
     text = format(localDateTime)
 
   private val localDateTimeButton = new Button:
