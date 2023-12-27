@@ -15,7 +15,7 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
 
   val value: ObjectProperty[LocalDateTime] = ObjectProperty(localDateTime)
 
-  val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd, hh:mm")
+  val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd, hh:mm a")
 
   def format(localDateTime: LocalDateTime): String = formatter.format(localDateTime)
 
