@@ -52,7 +52,6 @@ private final class PopupView(localDateTime: LocalDateTime,
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localDateTime.getMinute, amountToStepBy = 1)
   style = "-fx-background-color:white;-fx-border-color: gray;-fx-border-width:2;-fx-border-radius:3;-fx-hgap:3;-fx-vgap:3;"
 
-
   val controls = List[(String, Spinner[Int])](
     "Year:" -> yearSpinner,
     "Month:" -> monthSpinner,
@@ -61,7 +60,7 @@ private final class PopupView(localDateTime: LocalDateTime,
     "Minute:" -> minuteSpinner
   )
 
-  val selector = buildGridPane(controls)
+  val dateTimeField = buildGridPane(controls)
 
   val closeButton = new Button:
     alignment = Pos.CENTER
@@ -72,7 +71,7 @@ private final class PopupView(localDateTime: LocalDateTime,
       popupValue( value() )
     }
 
-  children = List(selector, closeButton)
+  children = List(dateTimeField, closeButton)
   VBox.setVgrow(this, Priority.Always)
 
   private def value(): LocalDateTime =
