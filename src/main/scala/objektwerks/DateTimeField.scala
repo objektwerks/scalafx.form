@@ -34,7 +34,7 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
     popup.setHideOnEscape(false)
     val popupView = PopupView(value.value, popup, popupValue)
     popup.content.addOne(popupView)
-    popup.show(popup.ownerWindow.value)
+    popup.show(App.stage)
 
   private def popupValue(popupLocalDateTime: LocalDateTime): Unit =
     value.value = popupLocalDateTime
