@@ -23,6 +23,9 @@ final class FormPane extends VBox:
   val doubleTextField = new DoubleTextField:
     text = "1.1"
 
+  val comboLabel = new Label:
+    text = "Combobox:"
+
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from( List("a", "b", "c") )
   	value = "a"
