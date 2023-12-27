@@ -10,5 +10,6 @@ final class FormPane extends VBox:
   val intTextField = new IntTextField:
     text = "1"
 
-   
+  val doubleTextField = new DoubleTextField:
+    text = "1.1"
     
