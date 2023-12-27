@@ -3,6 +3,7 @@ package objektwerks
 import scalafx.scene.control.Label
 import scalafx.geometry.Insets
 import scalafx.scene.layout.{Priority, VBox}
+import java.time.LocalDateTime
 
 final class FormPane extends VBox:
   spacing = 6
@@ -22,6 +23,8 @@ final class FormPane extends VBox:
 
   val dateTimeLabel = new Label:
     text = "Date Time Field:"
+
+  val dateTimeField = new DateTimeField( LocalDateTime.now )
 
   val fields = List(
     Field(intLabel, intTextField),
