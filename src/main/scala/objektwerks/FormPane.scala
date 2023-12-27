@@ -20,6 +20,9 @@ final class FormPane extends VBox:
   val doubleTextField = new DoubleTextField:
     text = "1.1"
 
+  val dateTimeLabel = new Label:
+    text = "Date Time Field:"
+
   val fields = List(
     Field(intLabel, intTextField),
     Field(doubleLabel, doubleTextField)
