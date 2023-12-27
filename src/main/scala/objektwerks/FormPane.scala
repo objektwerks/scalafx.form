@@ -28,8 +28,7 @@ final class FormPane extends VBox:
   	value = "a"
   comboBox.prefWidth = 150
 
-  val dateTimeLabel = new Label:
-    text = "Date Time Field:"
+  val dateTimeLabel = Label("Date Time Field:")
 
   val dateTimeField = new DateTimeField( LocalDateTime.now )
 
