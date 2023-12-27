@@ -43,4 +43,4 @@ final class FormPane extends VBox:
   val form = Form(fields)
 
   children = List(form)
-  VBox.setVgrow(form, Priority.Always)
+  VBox.setVgrow(this, Priority.Always)
