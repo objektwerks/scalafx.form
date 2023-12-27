@@ -28,7 +28,7 @@ final class FormPane extends VBox:
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from( List("a", "b", "c") )
   	value = "a"
-  comboBox.prefWidth = 100
+  comboBox.prefWidth = 150
 
   val dateTimeLabel = new Label:
     text = "Date Time Field:"
