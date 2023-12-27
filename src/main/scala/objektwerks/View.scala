@@ -8,7 +8,7 @@ class View:
   val contentPane = new VBox:
     spacing = 6
     padding = Insets(6)
-    children = List()
+    children = List( FormPane() )
 
   val scene = new Scene:
     root = contentPane
