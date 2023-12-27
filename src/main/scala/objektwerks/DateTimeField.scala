@@ -10,8 +10,8 @@ import scalafx.scene.layout.{GridPane, HBox, Priority, VBox}
 import scalafx.stage.Popup
 
 final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
-  spacing = 3
-  padding = Insets(3)
+  spacing = 6
+  padding = Insets(6)
 
   val value: ObjectProperty[LocalDateTime] = ObjectProperty(localDateTime)
 
