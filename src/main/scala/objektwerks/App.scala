@@ -7,5 +7,3 @@ object App extends JFXApp3:
     stage = new JFXApp3.PrimaryStage:
       scene = View().scene
       title = "Form"
-      maxWidth = 400
-      maxHeight = 300
