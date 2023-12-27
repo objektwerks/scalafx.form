@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.geometry.Insets
 import scalafx.scene.control.Label
-import scalafx.scene.layout.{GridPane, Region}
+import scalafx.scene.layout.{GridPane, Priority, Region}
 
 final class Validator():
   def validate: Boolean = true
@@ -20,3 +20,5 @@ final class Form(fields: List[Field]) extends GridPane:
     add(field.label, columnIndex = 0, rowIndex = row)
     add(field.control, columnIndex = 1, rowIndex = row)
     row += 1
+  GridPane.setHgrow(this, Priority.Always)
+  GridPane.setVgrow(this, Priority.Always)
