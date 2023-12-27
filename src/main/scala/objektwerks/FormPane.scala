@@ -20,5 +20,10 @@ final class FormPane extends VBox:
   val doubleTextField = new DoubleTextField:
     text = "1.1"
 
+  val fields = List(
+    Field(intLabel, intTextField),
+    Field(doubleLabel, doubleTextField)
+  )
+
   children = List(form)
   VBox.setVgrow(form, Priority.Always)
