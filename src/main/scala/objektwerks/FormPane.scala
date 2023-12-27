@@ -7,5 +7,8 @@ final class FormPane extends VBox:
   spacing = 6
   padding = Insets(6)
   
-  
+  val intTextField = new IntTextField:
+    text = "1"
+
+   
     
