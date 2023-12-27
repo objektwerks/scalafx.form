@@ -58,7 +58,7 @@ private final class PopupView(localDateTime: LocalDateTime,
   val controls = List[(String, Spinner[Int])](
     "Year:" -> yearSpinner,
     "Month:" -> monthSpinner,
-    "Time:" -> daySpinner,
+    "Day:" -> daySpinner,
     "Hour:" -> hourSpinner,
     "Minute:" -> minuteSpinner
   )
