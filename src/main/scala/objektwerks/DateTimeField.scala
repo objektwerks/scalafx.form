@@ -45,13 +45,15 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
 private final class PopupView(localDateTime: LocalDateTime,
                               popup: Popup,
                               popupValue: (LocalDateTime) => Unit) extends VBox: 
+  spacing = 6
+  padding = Insets(6)
+  alignment = Pos.CENTER
+  style = "-fx-background-color:white;-fx-border-color: gray;-fx-border-width:2;-fx-border-radius:3;-fx-hgap:3;-fx-vgap:3;"
   val yearSpinner = Spinner[Int](min = localDateTime.getYear - 1, max = localDateTime.getYear, initialValue = localDateTime.getYear, amountToStepBy = 1)
   val monthSpinner = Spinner[Int](min = 1, max = 12, initialValue = localDateTime.getMonthValue, amountToStepBy = 1)
   val daySpinner = Spinner[Int](min = 1, max = 31, initialValue = localDateTime.getDayOfMonth, amountToStepBy = 1)
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localDateTime.getHour, amountToStepBy = 1)
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localDateTime.getMinute, amountToStepBy = 1)
-  alignment = Pos.CENTER
-  style = "-fx-background-color:white;-fx-border-color: gray;-fx-border-width:2;-fx-border-radius:3;-fx-hgap:3;-fx-vgap:3;"
 
   val controls = List[(String, Spinner[Int])](
     "Year:" -> yearSpinner,
