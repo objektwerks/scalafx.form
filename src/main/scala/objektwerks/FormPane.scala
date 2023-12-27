@@ -39,6 +39,7 @@ final class FormPane extends VBox:
   val fields = List(
     Field(intLabel, intTextField),
     Field(doubleLabel, doubleTextField),
+    Field(comboLabel, comboBox),
     Field(dateTimeLabel, dateTimeField)
   )
 
