@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.geometry.Insets
-import scalafx.scene.layout.VBox
+import scalafx.scene.layout.{Priority, VBox}
 
 final class FormPane extends VBox:
   spacing = 6
@@ -12,4 +12,6 @@ final class FormPane extends VBox:
 
   val doubleTextField = new DoubleTextField:
     text = "1.1"
-    
+
+  children = List(form)
+  VBox.setVgrow(form, Priority.Always)
