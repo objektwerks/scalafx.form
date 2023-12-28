@@ -29,10 +29,10 @@ final class FormPane extends VBox:
   val dateTimeField = new DateTimeField( LocalDateTime.now )
 
   val fields = List(
-    Field(intLabel, intTextField),
-    Field(doubleLabel, doubleTextField),
-    Field(comboLabel, comboBox),
-    Field(dateTimeLabel, dateTimeField)
+    intLabel -> intTextField,
+    doubleLabel -> doubleTextField,
+    comboLabel -> comboBox,
+    dateTimeLabel -> dateTimeField
   )
 
   val form = Form(fields)
