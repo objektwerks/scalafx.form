@@ -4,12 +4,15 @@ import scalafx.geometry.Insets
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{GridPane, Priority, Region}
 
-final class Validator():
+trait Validator:
+  def validate: Boolean
+
+final class DefaultValidator extends Validator:
   def validate: Boolean = true
 
 final case class Field(label: Label,
                        control: Region,
-                       validator: Validator = Validator())
+                       validator: Validator = DefaultValidator())
 
 final class Form(fields: List[Field]) extends GridPane:
   hgap = 6
