@@ -39,10 +39,9 @@ final class FormPane extends VBox:
   )
 
   val form = Form(fields)
-  form.isValid.onChange { (source, oldValue, newValue) =>
-    Alert(AlertType.Information, s"[form pane] isValid > onChange] Is form valid: $newValue").show()
-    isValidLabel.text = s"Is form valid: $newValue"
-  }
+  val isFormValid = form.validate()
+  Alert(AlertType.Information, s"[form pane] form > validate] Is form valid: $isFormValid").show()
+  isValidLabel.text = s"Is form valid: $isFormValid"
  
   children = List(form, isValidLabel)
   VBox.setVgrow(this, Priority.Always)
