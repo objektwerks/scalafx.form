@@ -19,16 +19,17 @@ final class Form(fields: List[Field]) extends GridPane:
   for (field <- fields)
     add(field.label, columnIndex = 0, rowIndex = row)
     add(field.control, columnIndex = 1, rowIndex = row)
-    field.control.onInputMethodTextChanged.onChange( (source, oldValue, newValue) => validate() )
+    field.control.onInputMethodTextChanged.onChange { (source, oldValue, newValue) =>
+      Alert(AlertType.Information, s"[form] onChange: $oldValue -> $newValue").show()
+      validate()
+    }
     row += 1
-
-  validate()
 
   private def validate(): Unit =
     var validations = 0
     for (field <- fields)
       if field.validator.validate() then validations += 1
 
-    Alert(AlertType.Information, s"[form] Is form valid: ${validations == fields.length}").showAndWait()
+    Alert(AlertType.Information, s"[form] validate: ${validations == fields.length}").show()
 
     isValid.value = if validations == fields.length then true else false
