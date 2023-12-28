@@ -4,12 +4,6 @@ import scalafx.geometry.Insets
 import scalafx.scene.control.Label
 import scalafx.scene.layout.{GridPane, Priority, Region}
 
-trait Validator:
-  def validate(): Boolean
-
-final class DefaultValidator extends Validator:
-  def validate(): Boolean = true
-
 final case class Field(label: Label,
                        control: Region,
                        validator: Validator = DefaultValidator())
