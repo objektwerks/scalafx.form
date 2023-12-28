@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.collections.ObservableBuffer
-import scalafx.scene.control.{ComboBox, Label, TextField}
+import scalafx.scene.control.{ComboBox, Label}
 import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.layout.{Priority, VBox}
 
@@ -28,20 +28,17 @@ final class FormPane extends VBox:
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField( LocalDateTime.now )
 
-  val isValidLabel = Label("Is Form Valid:")
-  val isValidField = new TextField:
-    text = "Is form valid: ?"
+  val isValidLabel = Label("Is Form Valid: ?")
 
   val fields = List(
     Field(intLabel, intTextField),
     Field(doubleLabel, doubleTextField),
     Field(comboLabel, comboBox),
-    Field(dateTimeLabel, dateTimeField),
-    Field(isValidLabel, isValidField)
+    Field(dateTimeLabel, dateTimeField)
   )
 
   val form = Form(fields)
-  form.isValid.onChange { (source, oldValue, newValue) => isValidField.text = s"Is form valid: $newValue" }
+  form.isValid.onChange { (source, oldValue, newValue) => isValidLabel.text = s"Is form valid: $newValue" }
  
-  children = List(form)
+  children = List(form, isValidLabel)
   VBox.setVgrow(this, Priority.Always)
