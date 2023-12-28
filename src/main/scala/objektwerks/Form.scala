@@ -1,5 +1,7 @@
 package objektwerks
 
+import scalafx.scene.control.Alert
+import scalafx.scene.control.Alert.AlertType
 import scalafx.geometry.Insets
 import scalafx.scene.layout.{GridPane, Priority}
 import scalafx.beans.property.ObjectProperty
@@ -26,5 +28,7 @@ final class Form(fields: List[Field]) extends GridPane:
     var validations = 0
     for (field <- fields)
       if field.validator.validate() then validations += 1
+
+    Alert(AlertType.Information, s"[form] Is form valid: ${validations == fields.length}").showAndWait()
 
     isValid.value = if validations == fields.length then true else false
