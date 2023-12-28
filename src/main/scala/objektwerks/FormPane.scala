@@ -29,7 +29,8 @@ final class FormPane extends VBox:
   val dateTimeField = new DateTimeField( LocalDateTime.now )
 
   val isValidLabel = Label("Is Form Valid:")
-  val isValidField = TextField()
+  val isValidField = new TextField:
+    text = "Is form valid: ?"
 
   val fields = List(
     Field(intLabel, intTextField),
@@ -40,7 +41,7 @@ final class FormPane extends VBox:
   )
 
   val form = Form(fields)
-  form.isValid.onChange( (source, oldValue, newValue) => isValidField.text = s"Is form valid: $newValue" )
+  form.isValid.onChange { (source, oldValue, newValue) => isValidField.text = s"Is form valid: $newValue" }
  
   children = List(form)
   VBox.setVgrow(this, Priority.Always)

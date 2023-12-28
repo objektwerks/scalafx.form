@@ -6,6 +6,7 @@ import scalafx.beans.property.ObjectProperty
 
 final class Form(fields: List[Field]) extends GridPane:
   val isValid = ObjectProperty[Boolean](false)
+  validate()
   
   hgap = 6
   vgap = 6
@@ -19,8 +20,6 @@ final class Form(fields: List[Field]) extends GridPane:
     add(field.label, columnIndex = 0, rowIndex = row)
     add(field.control, columnIndex = 1, rowIndex = row)
     row += 1
-
-  validate()
 
   private def validate(): Unit =
     var validations = 0
