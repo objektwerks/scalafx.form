@@ -15,10 +15,3 @@ final class Form(fields: List[Field]) extends GridPane:
     add(field.label, columnIndex = 0, rowIndex = row)
     add(field.control, columnIndex = 1, rowIndex = row)
     row += 1
-
-  def validate(): Boolean =
-    var validations = 0
-    for (field <- fields)
-      if field.validator.validate() then validations += 1
-
-    validations == fields.length
