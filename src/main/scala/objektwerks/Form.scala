@@ -1,8 +1,7 @@
 package objektwerks
 
 import scalafx.geometry.Insets
-import scalafx.scene.control.Label
-import scalafx.scene.layout.{GridPane, Priority, Region}
+import scalafx.scene.layout.{GridPane, Priority}
 
 final class Form(fields: List[Field]) extends GridPane:
   hgap = 6
