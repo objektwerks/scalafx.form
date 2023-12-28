@@ -1,7 +1,8 @@
 package objektwerks
 
 import scalafx.collections.ObservableBuffer
-import scalafx.scene.control.{ComboBox, Label}
+import scalafx.scene.control.{Alert, ComboBox, Label}
+import scalafx.scene.control.Alert.AlertType
 import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.layout.{Priority, VBox}
 
@@ -38,7 +39,10 @@ final class FormPane extends VBox:
   )
 
   val form = Form(fields)
-  form.isValid.onChange { (source, oldValue, newValue) => isValidLabel.text = s"Is form valid: $newValue" }
+  form.isValid.onChange { (source, oldValue, newValue) =>
+    Alert(AlertType.Information, s"Is form valid: $newValue").showAndWait()
+    isValidLabel.text = s"Is form valid: $newValue"
+  }
  
   children = List(form, isValidLabel)
   VBox.setVgrow(this, Priority.Always)
