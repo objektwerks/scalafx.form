@@ -40,7 +40,7 @@ final class FormPane extends VBox:
 
   val form = Form(fields)
   form.isValid.onChange { (source, oldValue, newValue) =>
-    Alert(AlertType.Information, s"Is form valid: $newValue").showAndWait()
+    Alert(AlertType.Information, s"[form pane] Is form valid: $newValue").showAndWait()
     isValidLabel.text = s"Is form valid: $newValue"
   }
  
