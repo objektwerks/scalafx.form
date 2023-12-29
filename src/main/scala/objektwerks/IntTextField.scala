@@ -18,6 +18,6 @@ class IntTextField(int: Int) extends TextField:
   }
 
   text = int.toString
-  textFormatter = new TextFormatter[Int](converter, 0, filter)
+  textFormatter = TextFormatter[Int](converter, 0, filter)
 
   def int(default: Int): Int = text.value.toIntOption.getOrElse(default)
