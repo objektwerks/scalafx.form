@@ -14,8 +14,7 @@ final class FormPane(model: Model) extends VBox:
   val intTextField = new IntTextField(model.int)
 
   val doubleLabel = Label("Double Field:")
-  val doubleTextField = new DoubleTextField:
-    text = model.double.toString
+  val doubleTextField = new DoubleTextField(model.double)
 
   val comboLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
