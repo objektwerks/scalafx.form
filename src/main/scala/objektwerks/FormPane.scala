@@ -26,7 +26,7 @@ final class FormPane(model: Model) extends VBox:
   	value = model.list.head
 
   val dateTimeLabel = Label("Date Time Field:")
-  val dateTimeField = new DateTimeField( LocalDateTime.now )
+  val dateTimeField = new DateTimeField( model.datetime )
 
   val fields = List(
     intLabel -> intTextField,
