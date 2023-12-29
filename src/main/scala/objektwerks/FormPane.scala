@@ -7,14 +7,14 @@ import scalafx.scene.layout.{Priority, VBox}
 
 import java.time.LocalDateTime
 
-final class FormPane extends VBox:
+final class FormPane(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
   
   val intLabel = Label("Int Field:")
   val intTextField = new IntTextField:
-    text = "1"
+    text = model.int.toString
 
   val doubleLabel = Label("Double Field:")
   val doubleTextField = new DoubleTextField:
