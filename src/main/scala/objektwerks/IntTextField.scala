@@ -7,7 +7,9 @@ import scalafx.util.converter.IntStringConverter
 object IntTextField:
   val regex = """[0-9]+""".r
 
-class IntTextField extends TextField:
+class IntTextField(int: Int) extends TextField:
+  text = int.toString
+
   val converter = IntStringConverter()
   val filter: Change => Change = { (change: Change) =>
     if IntTextField.regex.matches(change.text) then
