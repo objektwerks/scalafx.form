@@ -1,7 +1,7 @@
 package objektwerks
 
-import scalafx.scene.control.Label
 import scalafx.geometry.Insets
+import scalafx.scene.control.Label
 import scalafx.scene.layout.{GridPane, Priority, Region}
 
 final class Form(fields: List[(Label, Region)]) extends GridPane:
