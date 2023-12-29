@@ -7,7 +7,9 @@ import scalafx.util.converter.DoubleStringConverter
 object DoubleTextField:
   val regex = """([0-9]+([.][0-9]*)?|[.][0-9]+)""".r
 
-class DoubleTextField extends TextField:
+class DoubleTextField(double: Double) extends TextField:
+  text = double.toString
+  
   val converter = DoubleStringConverter()
   val filter: Change => Change = { (change: Change) =>
     if DoubleTextField.regex.matches(change.text) then
