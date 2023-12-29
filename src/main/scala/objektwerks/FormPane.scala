@@ -11,7 +11,8 @@ final class FormPane(model: Model) extends VBox:
   spacing = 6
   
   val intLabel = Label("Int Field:")
-  val intTextField = new IntTextField(model.int)
+  val intTextField = new IntTextField:
+    text = model.int.toString
 
   val doubleLabel = Label("Double Field:")
   val doubleTextField = new DoubleTextField(model.double)
