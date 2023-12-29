@@ -19,9 +19,8 @@ class DoubleTextField(double: Double) extends TextField:
         change.setText("") // else make no change
       change
   }
-  val formatter = new TextFormatter[Double](converter, 0.0, filter)
 
   text = double.toString
-  textFormatter = formatter
+  textFormatter = TextFormatter[Double](converter, 0.0, filter)
 
   def double(default: Double): Double = text.value.toDoubleOption.getOrElse(default)
