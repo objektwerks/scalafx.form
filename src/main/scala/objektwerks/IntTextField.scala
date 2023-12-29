@@ -8,8 +8,6 @@ object IntTextField:
   val regex = """[0-9]+""".r
 
 class IntTextField(int: Int) extends TextField:
-  text = int.toString
-
   val converter = IntStringConverter()
   val filter: Change => Change = { (change: Change) =>
     if IntTextField.regex.matches(change.text) then
@@ -20,6 +18,7 @@ class IntTextField(int: Int) extends TextField:
   }
   val formatter = new TextFormatter[Int](converter, 0, filter)
 
+  text = int.toString
   textFormatter = formatter
 
   def int(default: Int): Int = text.value.toIntOption.getOrElse(default)
