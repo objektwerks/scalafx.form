@@ -7,7 +7,7 @@ import scalafx.util.converter.IntStringConverter
 object IntTextField:
   val regex = """[0-9]+""".r
 
-class IntTextField(int: Int) extends TextField:
+class IntTextField extends TextField:
   val converter = IntStringConverter()
   val filter: Change => Change = { (change: Change) =>
     if IntTextField.regex.matches(change.text) then
@@ -16,8 +16,6 @@ class IntTextField(int: Int) extends TextField:
       change.setText("") // else make no change
       change
   }
-
-  text = int.toString
   textFormatter = TextFormatter[Int](converter, 0, filter)
 
   def int(default: Int): Int = text.value.toIntOption.getOrElse(default)
