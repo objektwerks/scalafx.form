@@ -16,9 +16,8 @@ class IntTextField(int: Int) extends TextField:
       change.setText("") // else make no change
       change
   }
-  val formatter = new TextFormatter[Int](converter, 0, filter)
 
   text = int.toString
-  textFormatter = formatter
+  textFormatter = new TextFormatter[Int](converter, 0, filter)
 
   def int(default: Int): Int = text.value.toIntOption.getOrElse(default)
