@@ -1,8 +1,8 @@
 package objektwerks
 
 import scalafx.collections.ObservableBuffer
-import scalafx.scene.control.{ComboBox, Label}
 import scalafx.geometry.{Insets, Pos}
+import scalafx.scene.control.{ComboBox, Label}
 import scalafx.scene.layout.{Priority, VBox}
 
 final class ModelView(model: Model) extends VBox:
