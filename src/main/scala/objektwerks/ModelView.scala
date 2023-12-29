@@ -5,7 +5,7 @@ import scalafx.scene.control.{ComboBox, Label}
 import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.layout.{Priority, VBox}
 
-final class FormPane(model: Model) extends VBox:
+final class ModelView(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
