@@ -28,12 +28,13 @@ final class ModelView(model: Model) extends VBox:
   	value = model.list.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
 
-  val intSlider = new NumberSlider(textFieldText = "Int Slider:",
+  val intSliderLabel = Label("Int Slider:")
+  val intSlider = new NumberSlider(textFieldText = 5.toString,
                                    textFieldFormatConverter = formatConverter(integerFormat)):
-                     slider.min = 0
-                     slider.max = 10
-                     slider.majorTickUnit = 1
-                     slider.value = 5
+                    slider.min = 0
+                    slider.max = 10
+                    slider.majorTickUnit = 1
+                    slider.value = 5
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
