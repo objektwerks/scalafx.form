@@ -69,6 +69,7 @@ final class ModelView(model: Model) extends VBox:
       doubleTextField.text = model.double.toString
       intSlider.slider.value = model.int
       doubleSlider.slider.value = model.double
+      comboBox.value = model.list.head
     }
  
   children = List(form, submitButton)
