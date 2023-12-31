@@ -13,6 +13,7 @@ final class ModelView(model: Model) extends VBox:
   val intLabel = Label("Int Field:")
   val intTextField = new IntTextField:
     text = model.intProperty.value.toString
+    text.onChange { (_, _, newValue) => model.intProperty.value = newValue.toInt }
 
   val doubleLabel = Label("Double Field:")
   val doubleTextField = new DoubleTextField:
