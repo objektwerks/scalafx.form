@@ -70,6 +70,7 @@ final class ModelView(model: Model) extends VBox:
       intSlider.slider.value = model.int
       doubleSlider.slider.value = model.double
       comboBox.value = model.list.head
+      dateTimeField.value.value = model.datetime
     }
  
   children = List(form, submitButton)
