@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Pos}
-import scalafx.scene.control.{Button, ComboBox, Label}
+import scalafx.scene.control.{Button, CheckBox, ComboBox, Label}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -39,11 +39,15 @@ final class ModelView(model: Model) extends VBox:
                     slider.majorTickUnit = 1.0
                     slider.value = model.double
 
-  val comboLabel = Label("ComboBox:")
+  val comboBoxLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from(model.list)
   	value = model.list.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
+
+  val checkBoxLabel = Label("CheckBox:")
+  val checkBox = new CheckBox:
+    selected = model.isSelected
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
@@ -54,7 +58,7 @@ final class ModelView(model: Model) extends VBox:
     doubleLabel -> doubleTextField,
     intSliderLabel -> intSlider,
     doubleSliderLabel -> doubleSlider,
-    comboLabel -> comboBox,
+    comboBoxLabel -> comboBox,
     dateTimeLabel -> dateTimeField
   )
 
