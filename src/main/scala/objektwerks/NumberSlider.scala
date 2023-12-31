@@ -17,6 +17,7 @@ object NumberSlider:
 class NumberSlider(textFieldText: String,
                    textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
   val slider = new Slider:
+    prefWidth = 350
     showTickLabels = true
     showTickMarks = true
     snapToTicks = true
