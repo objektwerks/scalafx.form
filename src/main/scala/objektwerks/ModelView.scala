@@ -30,7 +30,7 @@ final class ModelView(model: Model) extends VBox:
                     slider.majorTickUnit = 1
                     slider.value = 5
 
-  val doubleSliderLabel = Label("Int Slider:")
+  val doubleSliderLabel = Label("Double Slider:")
   val doubleSlider = new NumberSlider(textFieldText = 5.5.toString,
                                    textFieldFormatConverter = formatConverter(integerFormat)):
                     slider.min = 0.0
