@@ -5,6 +5,8 @@ import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.control.{ComboBox, Label}
 import scalafx.scene.layout.{Priority, VBox}
 
+import NumberSlider.*
+
 final class ModelView(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
@@ -25,6 +27,13 @@ final class ModelView(model: Model) extends VBox:
   	items = ObservableBuffer.from(model.list)
   	value = model.list.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
+
+  val intSlider = new NumberSlider(textFieldText = "Int Slider:",
+                                   textFieldFormatConverter = formatConverter(integerFormat)):
+                     slider.min = 0
+                     slider.max = 10
+                     slider.majorTickUnit = 1
+                     slider.value = 5
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)

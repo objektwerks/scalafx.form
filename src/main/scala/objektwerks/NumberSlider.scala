@@ -8,12 +8,12 @@ import scalafx.scene.layout.HBox
 import scalafx.util.converter.FormatStringConverter
 
 class NumberSlider(textFieldText: String,
-                   formatConverter: FormatStringConverter[Number]) extends HBox:
+                   textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
   val textField = new TextField:
     style = "-fx-background-color: #ececec;"
     editable = false
     text = textFieldText
-    textFormatter = new TextFormatter[Number](formatConverter):
+    textFormatter = new TextFormatter[Number](textFieldFormatConverter):
       value <== slider.value
 
   val slider = new Slider:
