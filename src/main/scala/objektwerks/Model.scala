@@ -12,4 +12,5 @@ final case class Model(int: Int = 1,
   val intProperty = ObjectProperty[Int](this, "int", int)
   val doubleProperty = ObjectProperty[Double](this, "double", double)
   val listProperty = ObjectProperty[List[String]](this, "list", list)
+  val listItemProperty = ObjectProperty[String](this, "listItem", listItem)
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
