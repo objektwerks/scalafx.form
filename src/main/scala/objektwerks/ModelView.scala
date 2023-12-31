@@ -67,5 +67,5 @@ final class ModelView(model: Model) extends VBox:
     onAction = { _ =>
     }
  
-  children = List(form)
+  children = List(form, submitButton)
   VBox.setVgrow(this, Priority.Always)
