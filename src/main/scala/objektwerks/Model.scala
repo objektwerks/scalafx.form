@@ -6,9 +6,9 @@ import scalafx.beans.property.ObjectProperty
 
 final case class Model(int: Int = 5,
                        double: Double = 5.5,
-                       intRange: Range = Range(1, 10).inclusive,
+                       intRange: Range = Range(0, 10).inclusive,
                        intRangeValue: Int = 5,
-                       doubleRange: Range = Range(1, 10).inclusive,
+                       doubleRange: Range = Range(0, 10).inclusive,
                        doubleRangeValue: Double = 5.5,
                        list: List[String] = List("abc", "def", "ghi"),
                        listItem: String = "abc",
