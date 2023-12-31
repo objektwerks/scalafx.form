@@ -65,6 +65,10 @@ final class ModelView(model: Model) extends VBox:
     text = "Submit"
     disable = false
     onAction = { _ =>
+      intTextField.text = model.int.toString
+      doubleTextField.text = model.double.toString
+      intSlider.slider.value = model.int
+      doubleSlider.slider.value = model.double
     }
  
   children = List(form, submitButton)
