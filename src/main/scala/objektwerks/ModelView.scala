@@ -20,8 +20,8 @@ final class ModelView(model: Model) extends VBox:
 
   val comboLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
-  	items = ObservableBuffer.from(model.list)
-  	value = model.list.head
+  	items = ObservableBuffer.from(model.listProperty.value)
+  	value = model.listProperty.value.head
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
