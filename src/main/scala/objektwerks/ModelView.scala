@@ -35,6 +35,7 @@ final class ModelView(model: Model) extends VBox:
                                       textFieldFormatConverter = formatConverter(decimalFormat)):
                     slider.min = 0.0
                     slider.max = 10.0
+                    slider.minorTickCount = 1
                     slider.majorTickUnit = 1.0
                     slider.value = 5.5
 
