@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Pos}
-import scalafx.scene.control.{ComboBox, Label}
+import scalafx.scene.control.{Button, ComboBox, Label}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -59,6 +59,13 @@ final class ModelView(model: Model) extends VBox:
   )
 
   val form = Form(fields)
+
+  val submitButton = new Button:
+    alignment = Pos.CENTER
+    text = "Submit"
+    disable = false
+    onAction = { _ =>
+    }
  
   children = List(form)
   VBox.setVgrow(this, Priority.Always)
