@@ -24,7 +24,7 @@ final class ModelView(model: Model) extends VBox:
   	value = model.listProperty.value.head
 
   val dateTimeLabel = Label("Date Time Field:")
-  val dateTimeField = new DateTimeField(model.datetime)
+  val dateTimeField = new DateTimeField(model.datetimeProperty.value)
 
   val fields = List(
     intLabel -> intTextField,
