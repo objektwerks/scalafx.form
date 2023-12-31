@@ -9,4 +9,5 @@ final case class Model(int: Int = 1,
                        list: List[String] = List("abc", "def", "ghi"),
                        datetime: LocalDateTime = LocalDateTime.now):
   val intProperty = ObjectProperty[Int](this, "int", int)
+  val doubleProperty = ObjectProperty[Double](this, "double", double)
 
