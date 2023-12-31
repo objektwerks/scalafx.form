@@ -4,8 +4,8 @@ import java.time.LocalDateTime
 
 import scalafx.beans.property.ObjectProperty
 
-final case class Model(int: Int = 1,
-                       double: Double = 1.1,
+final case class Model(int: Int = 5,
+                       double: Double = 5.5,
                        list: List[String] = List("abc", "def", "ghi"),
                        listItem: String = "abc",
                        datetime: LocalDateTime = LocalDateTime.now):
