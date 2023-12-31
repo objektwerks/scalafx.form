@@ -1,6 +1,6 @@
 ScalaFx Form
 ------------
->ScalaFx form component using Scala 3. WIP!
+>ScalaFx form component using Scala 3.
 
 Model
 -----
