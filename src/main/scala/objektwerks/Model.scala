@@ -8,6 +8,7 @@ final case class Model(int: Int = 5,
                        double: Double = 5.5,
                        list: List[String] = List("abc", "def", "ghi"),
                        listItem: String = "abc",
+                       isSelected: Boolean = true,
                        datetime: LocalDateTime = LocalDateTime.now):
   val intProperty = ObjectProperty[Int](this, "int", int)
   val doubleProperty = ObjectProperty[Double](this, "double", double)
