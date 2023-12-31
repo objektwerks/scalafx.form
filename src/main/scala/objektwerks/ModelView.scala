@@ -34,12 +34,12 @@ final class ModelView(model: Model) extends VBox:
   val doubleSliderLabel = Label("Double Slider:")
   val doubleSlider = new NumberSlider(textFieldText = model.double.toString,
                                       textFieldFormatConverter = formatConverter(decimalFormat)):
-                    slider.min = 0.0
-                    slider.max = 10.0
+                    slider.min = model.doubleRange.start.toDouble
+                    slider.max = model.doubleRange.end.toDouble
                     slider.minorTickCount = 1
                     slider.majorTickUnit = 1.0
                     slider.value = model.double
-                    slider.value.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.doubleValue }
+                    slider.value.onChange { (_, _, newValue) => model.doubleRangeValueProperty.value = newValue.doubleValue }
 
   val comboBoxLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
