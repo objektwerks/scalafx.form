@@ -44,6 +44,7 @@ final class ModelView(model: Model) extends VBox:
     intLabel -> intTextField,
     doubleLabel -> doubleTextField,
     comboLabel -> comboBox,
+    intSliderLabel -> intSlider,
     dateTimeLabel -> dateTimeField
   )
 
