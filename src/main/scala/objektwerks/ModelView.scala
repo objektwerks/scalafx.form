@@ -39,6 +39,7 @@ final class ModelView(model: Model) extends VBox:
                     slider.minorTickCount = 1
                     slider.majorTickUnit = 1.0
                     slider.value = model.double
+                    slider.value.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.doubleValue }
 
   val comboBoxLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
