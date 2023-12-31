@@ -13,6 +13,7 @@ final case class Model(int: Int = 5,
   val intProperty = ObjectProperty[Int](this, "int", int)
   val doubleProperty = ObjectProperty[Double](this, "double", double)
   val listItemProperty = ObjectProperty[String](this, "listItem", listItem)
+  val isSelectedProperty = ObjectProperty[Boolean](this, "isSelected", isSelected)
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
 
   def propertiesToModel: Model =
