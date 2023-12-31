@@ -39,15 +39,15 @@ final class ModelView(model: Model) extends VBox:
                     slider.majorTickUnit = 1.0
                     slider.value = model.double
 
-  val dateTimeLabel = Label("Date Time Field:")
-  val dateTimeField = new DateTimeField(model.datetime)
-  dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
-
   val comboLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from(model.list)
   	value = model.list.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
+
+  val dateTimeLabel = Label("Date Time Field:")
+  val dateTimeField = new DateTimeField(model.datetime)
+  dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
   val fields = List(
     intLabel -> intTextField,
