@@ -8,11 +8,11 @@ import scalafx.scene.layout.HBox
 import scalafx.util.converter.FormatStringConverter
 
 object NumberSlider:
-  def decimalFormat = DecimalFormat("####.#")
-  def integerFormat = NumberFormat.getIntegerInstance
+  private def decimalFormat = DecimalFormat("####.#")
+  private def integerFormat = NumberFormat.getIntegerInstance
 
-  def formatConverter(format: DecimalFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
-  def formatConverter(format: NumberFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
+  def decimalFormatConverter: FormatStringConverter[Number] = FormatStringConverter[Number](decimalFormat)
+  def integerFormatConverter: FormatStringConverter[Number] = FormatStringConverter[Number](integerFormat)
 
 class NumberSlider(textFieldText: String,
                    textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
