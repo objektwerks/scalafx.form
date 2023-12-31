@@ -45,7 +45,7 @@ final class DateTimeField(localDateTime: LocalDateTime) extends HBox:
 
 private final class PopupView(localDateTime: LocalDateTime,
                               popup: Popup,
-                              popupValue: (LocalDateTime) => Unit) extends VBox: 
+                              popupValue: LocalDateTime => Unit) extends VBox: 
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
@@ -72,13 +72,13 @@ private final class PopupView(localDateTime: LocalDateTime,
     disable = false
     onAction = { _ =>
       popup.hide()
-      popupValue( value() )
+      popupValue( onValueChange() )
     }
 
   children = List(dateTimeField, closeButton)
   VBox.setVgrow(this, Priority.Always)
 
-  private def value(): LocalDateTime =
+  private def onValueChange(): LocalDateTime =
     LocalDateTime
       .of(
         yearSpinner.value.value,

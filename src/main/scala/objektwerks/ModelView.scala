@@ -28,6 +28,7 @@ final class ModelView(model: Model) extends VBox:
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetimeProperty.value)
+  dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
   val fields = List(
     intLabel -> intTextField,
