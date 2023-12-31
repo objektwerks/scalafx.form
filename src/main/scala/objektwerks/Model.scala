@@ -26,6 +26,8 @@ final case class Model(int: Int = 5,
     Model(
       int = intProperty.value,
       double = doubleProperty.value,
+      intRangeValue = intRangeValueProperty.value,
+      doubleRangeValue = doubleRangeValueProperty.value,
       list = list,
       listItem = listItemProperty.value,
       isSelected = isSelectedProperty.value,
