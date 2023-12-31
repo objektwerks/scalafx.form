@@ -32,7 +32,7 @@ final class ModelView(model: Model) extends VBox:
 
   val doubleSliderLabel = Label("Double Slider:")
   val doubleSlider = new NumberSlider(textFieldText = 5.5.toString,
-                                   textFieldFormatConverter = formatConverter(integerFormat)):
+                                      textFieldFormatConverter = formatConverter(decimalFormat)):
                     slider.min = 0.0
                     slider.max = 10.0
                     slider.majorTickUnit = 1.0
