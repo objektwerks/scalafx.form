@@ -23,21 +23,21 @@ final class ModelView(model: Model) extends VBox:
     text.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.toDouble }
 
   val intSliderLabel = Label("Int Slider:")
-  val intSlider = new NumberSlider(textFieldText = 5.toString,
+  val intSlider = new NumberSlider(textFieldText = model.int.toString,
                                    textFieldFormatConverter = formatConverter(integerFormat)):
                     slider.min = 0
                     slider.max = 10
                     slider.majorTickUnit = 1
-                    slider.value = 5
+                    slider.value = model.int
 
   val doubleSliderLabel = Label("Double Slider:")
-  val doubleSlider = new NumberSlider(textFieldText = 5.5.toString,
+  val doubleSlider = new NumberSlider(textFieldText = model.double.toString,
                                       textFieldFormatConverter = formatConverter(decimalFormat)):
                     slider.min = 0.0
                     slider.max = 10.0
                     slider.minorTickCount = 1
                     slider.majorTickUnit = 1.0
-                    slider.value = 5.5
+                    slider.value = model.double
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
