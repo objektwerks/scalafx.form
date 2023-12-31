@@ -22,12 +22,6 @@ final class ModelView(model: Model) extends VBox:
     text = model.double.toString
     text.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.toDouble }
 
-  val comboLabel = Label("ComboBox:")
-  val comboBox = new ComboBox[String]:
-  	items = ObservableBuffer.from(model.list)
-  	value = model.list.head
-  comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
-
   val intSliderLabel = Label("Int Slider:")
   val intSlider = new NumberSlider(textFieldText = 5.toString,
                                    textFieldFormatConverter = formatConverter(integerFormat)):
@@ -40,11 +34,17 @@ final class ModelView(model: Model) extends VBox:
   val dateTimeField = new DateTimeField(model.datetime)
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
+  val comboLabel = Label("ComboBox:")
+  val comboBox = new ComboBox[String]:
+  	items = ObservableBuffer.from(model.list)
+  	value = model.list.head
+  comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
+
   val fields = List(
     intLabel -> intTextField,
     doubleLabel -> doubleTextField,
-    comboLabel -> comboBox,
     intSliderLabel -> intSlider,
+    comboLabel -> comboBox,
     dateTimeLabel -> dateTimeField
   )
 
