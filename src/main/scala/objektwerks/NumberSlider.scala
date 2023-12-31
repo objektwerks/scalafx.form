@@ -7,6 +7,13 @@ import scalafx.scene.control.{Slider, TextField, TextFormatter}
 import scalafx.scene.layout.HBox
 import scalafx.util.converter.FormatStringConverter
 
+object NumberSlider:
+  def decimalFormat = DecimalFormat("####.#")
+  def integerFormat = NumberFormat.getIntegerInstance
+
+  def formatConverter(format: DecimalFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
+  def formatConverter(format: NumberFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
+
 class NumberSlider(textFieldText: String,
                    textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
   val textField = new TextField:
@@ -28,10 +35,3 @@ class NumberSlider(textFieldText: String,
 
   def valueAsDouble: Double = slider.value.toDouble
   def valueAsInt: Int = slider.value.toInt
-
-object NumberSlider:
-  def decimalFormat = DecimalFormat("####.#")
-  def integerFormat = NumberFormat.getIntegerInstance
-
-  def formatConverter(format: DecimalFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
-  def formatConverter(format: NumberFormat): FormatStringConverter[Number] = FormatStringConverter[Number](format)
