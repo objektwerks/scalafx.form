@@ -22,5 +22,6 @@ final case class Model(int: Int = 5,
       double = doubleProperty.value,
       list = list,
       listItem = listItemProperty.value,
+      isSelected = isSelectedProperty.value,
       datetime = datetimeProperty.value
     )
