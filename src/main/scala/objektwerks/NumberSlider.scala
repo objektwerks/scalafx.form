@@ -12,13 +12,11 @@ class NumberSlider(textFieldText: String,
   val textField = new TextField:
     style = "-fx-background-color: #ececec;"
     editable = false
-    prefWidth = 50
     text = textFieldText
     textFormatter = new TextFormatter[Number](formatConverter):
       value <== slider.value
 
   val slider = new Slider:
-    prefWidth = 600
     showTickLabels = true
     showTickMarks = true
     snapToTicks = true
