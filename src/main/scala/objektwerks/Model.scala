@@ -2,7 +2,11 @@ package objektwerks
 
 import java.time.LocalDateTime
 
+import scalafx.beans.property.ObjectProperty
+
 final case class Model(int: Int = 1,
                        double: Double = 1.1,
                        list: List[String] = List("abc", "def", "ghi"),
-                       datetime: LocalDateTime = LocalDateTime.now)
+                       datetime: LocalDateTime = LocalDateTime.now):
+  val intProperty = ObjectProperty[Int](this, "int", int)
+
