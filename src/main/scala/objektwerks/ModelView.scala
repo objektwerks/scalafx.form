@@ -12,22 +12,22 @@ final class ModelView(model: Model) extends VBox:
   
   val intLabel = Label("Int Field:")
   val intTextField = new IntTextField:
-    text = model.intProperty.value.toString
+    text = model.int.toString
     text.onChange { (_, _, newValue) => model.intProperty.value = newValue.toInt }
 
   val doubleLabel = Label("Double Field:")
   val doubleTextField = new DoubleTextField:
-    text = model.doubleProperty.value.toString
+    text = model.double.toString
     text.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.toDouble }
 
   val comboLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
-  	items = ObservableBuffer.from(model.listProperty.value)
-  	value = model.listProperty.value.head
+  	items = ObservableBuffer.from(model.list)
+  	value = model.list.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
 
   val dateTimeLabel = Label("Date Time Field:")
-  val dateTimeField = new DateTimeField(model.datetimeProperty.value)
+  val dateTimeField = new DateTimeField(model.datetime)
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
   val fields = List(
