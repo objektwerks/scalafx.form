@@ -18,6 +18,7 @@ final class ModelView(model: Model) extends VBox:
   val doubleLabel = Label("Double Field:")
   val doubleTextField = new DoubleTextField:
     text = model.doubleProperty.value.toString
+    text.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.toDouble }
 
   val comboLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
