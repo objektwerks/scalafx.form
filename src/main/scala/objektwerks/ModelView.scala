@@ -29,6 +29,7 @@ final class ModelView(model: Model) extends VBox:
                     slider.max = 10
                     slider.majorTickUnit = 1
                     slider.value = model.int
+                    slider.value.onChange { (_, _, newValue) => model.intProperty.value = newValue.intValue }
 
   val doubleSliderLabel = Label("Double Slider:")
   val doubleSlider = new NumberSlider(textFieldText = model.double.toString,
