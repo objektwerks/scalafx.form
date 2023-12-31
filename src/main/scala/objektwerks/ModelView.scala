@@ -48,6 +48,7 @@ final class ModelView(model: Model) extends VBox:
   val checkBoxLabel = Label("CheckBox:")
   val checkBox = new CheckBox:
     selected = model.isSelected
+    selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
 
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
