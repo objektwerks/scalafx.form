@@ -30,6 +30,14 @@ final class ModelView(model: Model) extends VBox:
                     slider.majorTickUnit = 1
                     slider.value = 5
 
+  val doubleSliderLabel = Label("Int Slider:")
+  val doubleSlider = new NumberSlider(textFieldText = 5.5.toString,
+                                   textFieldFormatConverter = formatConverter(integerFormat)):
+                    slider.min = 0.0
+                    slider.max = 10.0
+                    slider.majorTickUnit = 1.0
+                    slider.value = 5.5
+
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
