@@ -51,8 +51,8 @@ final class ModelView(model: Model) extends VBox:
 
   val comboBoxLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
-  	items = ObservableBuffer.from(model.list)
-  	value = model.list.head
+  	items = ObservableBuffer.from(model.items)
+  	value = model.items.head
   comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
 
   val checkBoxLabel = Label("CheckBox:")
@@ -88,7 +88,7 @@ final class ModelView(model: Model) extends VBox:
       doubleTextField.text = model.double.toString
       intSlider.slider.value = model.int
       doubleSlider.slider.value = model.double
-      comboBox.value = model.list.head
+      comboBox.value = model.items.head
       checkBox.selected = model.isSelected
       dateTimeField.value.value = model.datetime
       println(s"*** Reset model: ${model.propertiesToModel}")
