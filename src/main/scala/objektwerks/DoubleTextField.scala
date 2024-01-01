@@ -14,10 +14,10 @@ class DoubleTextField extends TextField:
       change // if double, make change
     else
       if !change.controlText.contains(".") && change.text.contains(".") then
-        change // if . then make change
+        change // if contains . then make change
       else 
         change.text = "" // else make no change
-      change
+        change
   }
   textFormatter = TextFormatter[Double](converter, 0.0, filter)
 
