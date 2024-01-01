@@ -80,6 +80,7 @@ final class ModelView(model: Model) extends VBox:
     disable = false
     onAction = { _ =>
       println(s"*** Modified model: ${model.propertiesToModel}")
+      textField.text = model.text
       intTextField.text = model.int.toString
       doubleTextField.text = model.double.toString
       intSlider.slider.value = model.int
