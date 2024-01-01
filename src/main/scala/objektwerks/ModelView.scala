@@ -18,7 +18,7 @@ final class ModelView(model: Model) extends VBox:
   val textLabel = Label("Text Field:")
   val textField = new NonEmptyTextField:
     text = model.text
-    text.onChange { (_, _, newValue) => if newValue.nonEmpty then model.textProperty.value = newValue }
+    text.onChange { (_, _, newValue) => model.textProperty.value = newValue }
 
   val intLabel = Label("Int Field:")
   val intTextField = new IntTextField:
