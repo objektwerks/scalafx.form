@@ -73,6 +73,7 @@ final class ModelView(model: Model) extends VBox:
     text = "Submit"
     disable = false
     onAction = { _ =>
+      println(s"*** Modified model: ${model.propertiesToModel}")
       intTextField.text = model.int.toString
       doubleTextField.text = model.double.toString
       intSlider.slider.value = model.int
@@ -80,6 +81,7 @@ final class ModelView(model: Model) extends VBox:
       comboBox.value = model.list.head
       checkBox.selected = model.isSelected
       dateTimeField.value.value = model.datetime
+      println(s"*** Reset model: ${model.propertiesToModel}")
     }
  
   children = List(form, submitButton)
