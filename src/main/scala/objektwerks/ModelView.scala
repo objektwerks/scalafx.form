@@ -62,6 +62,7 @@ final class ModelView(model: Model) extends VBox:
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
   val fields = List(
+    textLabel -> textField,
     intLabel -> intTextField,
     doubleLabel -> doubleTextField,
     intSliderLabel -> intSlider,
