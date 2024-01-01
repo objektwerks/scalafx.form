@@ -1,6 +1,6 @@
 name := "scalafx.form"
 organization := "objektwerks"
-version := "0.5"
+version := "0.6-SNAPSHOT"
 scalaVersion := "3.4.0-RC1"
 libraryDependencies ++= {
   Seq(
