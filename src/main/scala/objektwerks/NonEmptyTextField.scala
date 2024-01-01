@@ -5,9 +5,10 @@ import scalafx.scene.control.TextFormatter.Change
 
 class NonEmptyTextField extends TextField:
   val filter: Change => Change = { (change: Change) =>
-    if change.text.nonEmpty then
+    if change.controlNewText.length >= 1 then
       change // if nonempty, make change
     else
-      change.text = "" // else make no change
-      change
+      null // don't make change
   }
+
+  textFormatter = TextFormatter[String](filter)
