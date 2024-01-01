@@ -2,6 +2,10 @@ ScalaFx Form
 ------------
 >ScalaFx form component using Scala 3.
 
+Todo
+----
+1. Fix NonEmptyTextField.
+
 Model
 -----
 * Form 1 --> * Field 1 --> 1 (Label, Region)
