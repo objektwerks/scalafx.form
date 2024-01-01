@@ -26,6 +26,7 @@ final case class Model(text: String = "nonempty",
 
   def propertiesToModel: Model =
     Model(
+      text = textProperty.value,
       int = intProperty.value,
       double = doubleProperty.value,
       intRangeValue = intRangeValueProperty.value,
