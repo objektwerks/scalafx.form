@@ -10,14 +10,10 @@ object DoubleTextField:
 class DoubleTextField extends TextField: 
   val converter = DoubleStringConverter()
   val filter: Change => Change = { (change: Change) =>
-    if DoubleTextField.regex.matches(change.text) then
+    if DoubleTextField.regex.matches(change.controlNewText) then
       change // if double, make change
     else
-      if !change.controlText.contains(".") && change.text.contains(".") then
-        change // if contains . then make change
-      else 
-        change.text = "" // else make no change
-        change
+      null // else make no change
   }
   textFormatter = TextFormatter[Double](converter, 0.0, filter)
 
