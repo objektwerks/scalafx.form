@@ -8,5 +8,4 @@ class NonEmptyTextField extends TextField:
     if change.controlNewText.length >= 1 then change
     else null
   }
-
   textFormatter = TextFormatter[String](filter)
