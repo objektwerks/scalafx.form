@@ -4,7 +4,8 @@ import java.time.LocalDateTime
 
 import scalafx.beans.property.ObjectProperty
 
-final case class Model(int: Int = 5,
+final case class Model(text: String = "nonempty",
+                       int: Int = 5,
                        double: Double = 5.5,
                        intRange: Range = Range(0, 10).inclusive,
                        intRangeValue: Int = 5,
