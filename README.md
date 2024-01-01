@@ -8,6 +8,8 @@ Model
 * Model 1 --> * ObjectProperty[T]
 * ModelView 1 --> 1 Model, Form
 * ModelView 1 --> * Control
+* View 1 --> 1 ModelView
+* App 1 --> 1 View
 
 Build
 -----
