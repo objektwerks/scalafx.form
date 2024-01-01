@@ -8,6 +8,6 @@ class NonEmptyTextField extends TextField:
     if change.text.nonEmpty then
       change // if nonempty, make change
     else
-      change.setText("") // else make no change
+      change.text = "" // else make no change
       change
   }

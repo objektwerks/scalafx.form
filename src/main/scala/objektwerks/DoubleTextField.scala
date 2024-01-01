@@ -16,7 +16,7 @@ class DoubleTextField extends TextField:
       if !change.controlText.contains(".") && change.text.contains(".") then
         change // if . then make change
       else 
-        change.setText("") // else make no change
+        change.text = "" // else make no change
       change
   }
   textFormatter = TextFormatter[Double](converter, 0.0, filter)
