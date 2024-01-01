@@ -10,10 +10,8 @@ object IntTextField:
 class IntTextField extends TextField:
   val converter = IntStringConverter()
   val filter: Change => Change = { (change: Change) =>
-    if IntTextField.regex.matches(change.controlNewText) then
-      change // if integer, make change
-    else
-      null // else make no change
+    if IntTextField.regex.matches(change.controlNewText) then change
+    else null
   }
   textFormatter = TextFormatter[Int](converter, 0, filter)
 
