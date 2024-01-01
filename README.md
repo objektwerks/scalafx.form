@@ -5,7 +5,7 @@ ScalaFx Form
 Model
 -----
 * Form 1 --> * Field 1 --> 1 (Label, Region)
-* Model 1 --> * ObjectProperty[T]
+* Model 1 --> * ObjectProperty
 * ModelView 1 --> 1 Model, Form
 * ModelView 1 --> * Control
 * View 1 --> 1 ModelView ( typically with additional named views )
