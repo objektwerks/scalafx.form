@@ -13,7 +13,7 @@ class IntTextField extends TextField:
     if IntTextField.regex.matches(change.text) then
       change // if integer, make change
     else
-      change.setText("") // else make no change
+      change.text = "" // else make no change
       change
   }
   textFormatter = TextFormatter[Int](converter, 0, filter)
