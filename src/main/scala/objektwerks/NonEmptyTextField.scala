@@ -8,7 +8,7 @@ class NonEmptyTextField extends TextField:
     if change.controlNewText.length >= 1 then
       change // if nonempty, make change
     else
-      null // don't make change
+      null // else make no change
   }
 
   textFormatter = TextFormatter[String](filter)
