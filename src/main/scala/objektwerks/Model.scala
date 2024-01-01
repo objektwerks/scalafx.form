@@ -15,6 +15,7 @@ final case class Model(text: String = "nonempty",
                        listItem: String = "abc",
                        isSelected: Boolean = true,
                        datetime: LocalDateTime = LocalDateTime.now):
+  val textProperty = ObjectProperty[String](this, "text", text)
   val intProperty = ObjectProperty[Int](this, "int", int)
   val doubleProperty = ObjectProperty[Double](this, "double", double)
   val intRangeValueProperty = ObjectProperty[Int](this, "intRangeValue", intRangeValue)
