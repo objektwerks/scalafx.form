@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Pos}
-import scalafx.scene.control.{Button, CheckBox, ComboBox, Label}
+import scalafx.scene.control.{Button, CheckBox, ComboBox, Label, TextField}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -11,7 +11,12 @@ final class ModelView(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
-  
+
+  val textLabel = Label("Text Field:")
+  val textField = new TextField:
+    text = model.text
+    text.onChange { (_, _, newValue) => if newValue.nonEmpty then model.textProperty.value = newValue }
+
   val intLabel = Label("Int Field:")
   val intTextField = new IntTextField:
     text = model.int.toString
