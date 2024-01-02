@@ -14,7 +14,7 @@ class TimeField(localTime: LocalTime) extends HBox:
   val value = ObjectProperty[LocalTime](localTime)
 
   val labelHour = new Label:
-    alignment = Pos.CENTER_LEFT
+    // alignment = Pos.CENTER_LEFT
     text = "H:"
 
   val labelMinute = new Label:
@@ -22,9 +22,11 @@ class TimeField(localTime: LocalTime) extends HBox:
     text = "M:"
   
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localTime.getHour, amountToStepBy = 1)
+  hourSpinner.prefWidth = 75
   hourSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withHour(newValue) }
 
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localTime.getMinute, amountToStepBy = 1)
+  minuteSpinner.prefWidth = 75
   minuteSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withMinute(newValue) }
 
   children = List(labelHour, hourSpinner, labelMinute, minuteSpinner)
