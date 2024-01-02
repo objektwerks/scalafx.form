@@ -2,6 +2,7 @@ package objektwerks
 
 import java.time.LocalTime
 
+import scalafx.beans.property.ObjectProperty
 import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.control.{Label, Spinner}
 import scalafx.scene.layout.{HBox, Priority}
@@ -9,6 +10,8 @@ import scalafx.scene.layout.{HBox, Priority}
 class TimeField(localTime: LocalTime) extends HBox:
   spacing = 3
   padding = Insets(3)
+
+  val value = ObjectProperty[LocalTime](localTime)
 
   val labelHour = new Label:
     alignment = Pos.CENTER_LEFT
