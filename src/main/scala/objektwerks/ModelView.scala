@@ -92,20 +92,21 @@ final class ModelView(model: Model) extends VBox:
     alignment = Pos.CENTER
     text = "Submit"
     disable = false
-    onAction = { _ =>
-      println(s"*** Modified model: ${model.propertiesToModel}")
-      textField.text = model.text
-      intTextField.text = model.int.toString
-      doubleTextField.text = model.double.toString
-      intSlider.slider.value = model.int
-      doubleSlider.slider.value = model.double
-      comboBox.value = model.items.head
-      checkBox.selected = model.isSelected
-      datePicker.value = model.date
-      timeField.value.value = model.time
-      dateTimeField.value.value = model.datetime
-      println(s"*** Reset model: ${model.propertiesToModel}")
-    }
+    onAction = { _ => reset() }
  
   children = List(title, separator, form, submitButton)
   VBox.setVgrow(this, Priority.Always)
+
+  def reset(): Unit =
+    println(s"*** Modified model: ${model.propertiesToModel}")
+    textField.text = model.text
+    intTextField.text = model.int.toString
+    doubleTextField.text = model.double.toString
+    intSlider.slider.value = model.int
+    doubleSlider.slider.value = model.double
+    comboBox.value = model.items.head
+    checkBox.selected = model.isSelected
+    datePicker.value = model.date
+    timeField.value.value = model.time
+    dateTimeField.value.value = model.datetime
+    println(s"*** Reset model: ${model.propertiesToModel}")
