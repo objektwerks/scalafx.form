@@ -1,6 +1,6 @@
 ScalaFx Form
 ------------
->ScalaFx form layout and associated controls prototype using Scala 3.
+>ScalaFx form layout with assorted controls prototype using Scala 3.
 
 Model
 -----
