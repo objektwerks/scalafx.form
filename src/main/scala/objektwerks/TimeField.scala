@@ -22,6 +22,8 @@ class TimeField(localTime: LocalTime) extends HBox:
     text = "M:"
   
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localTime.getHour, amountToStepBy = 1)
+  hourSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withHour(newValue) }
+
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localTime.getMinute, amountToStepBy = 1)
 
   children = List(labelHour, hourSpinner, labelMinute, minuteSpinner)
