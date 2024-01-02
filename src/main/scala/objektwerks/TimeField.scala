@@ -25,6 +25,7 @@ class TimeField(localTime: LocalTime) extends HBox:
   hourSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withHour(newValue) }
 
   val minuteSpinner = Spinner[Int](min = 0, max = 59, initialValue = localTime.getMinute, amountToStepBy = 1)
+  minuteSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withMinute(newValue) }
 
   children = List(labelHour, hourSpinner, labelMinute, minuteSpinner)
   HBox.setHgrow(this, Priority.Always)
