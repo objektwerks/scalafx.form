@@ -1,6 +1,6 @@
 package objektwerks
 
-import java.time.LocalDateTime
+import java.time.{LocalDateTime, LocalTime}
 
 import scalafx.beans.property.ObjectProperty
 
@@ -14,6 +14,7 @@ final case class Model(text: String = "nonempty",
                        items: List[String] = List("abc", "def", "ghi"),
                        item: String = "abc",
                        isSelected: Boolean = true,
+                       time: LocalTime = LocalTime.now,
                        datetime: LocalDateTime = LocalDateTime.now):
   val textProperty = ObjectProperty[String](this, "text", text)
   val intProperty = ObjectProperty[Int](this, "int", int)
