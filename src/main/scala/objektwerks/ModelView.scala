@@ -101,6 +101,7 @@ final class ModelView(model: Model) extends VBox:
       doubleSlider.slider.value = model.double
       comboBox.value = model.items.head
       checkBox.selected = model.isSelected
+      datePicker.value = model.date
       timeField.value.value = model.time
       dateTimeField.value.value = model.datetime
       println(s"*** Reset model: ${model.propertiesToModel}")
