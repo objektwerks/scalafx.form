@@ -23,6 +23,7 @@ final case class Model(text: String = "nonempty",
   val doubleRangeValueProperty = ObjectProperty[Double](this, "doubleRangeValue", doubleRangeValue)
   val listItemProperty = ObjectProperty[String](this, "listItem", item)
   val isSelectedProperty = ObjectProperty[Boolean](this, "isSelected", isSelected)
+  val timeProperty = ObjectProperty[LocalTime](this, "time", time)
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
 
   def propertiesToModel: Model =
