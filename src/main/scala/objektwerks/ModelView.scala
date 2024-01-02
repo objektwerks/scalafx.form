@@ -60,6 +60,10 @@ final class ModelView(model: Model) extends VBox:
     selected = model.isSelected
     selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
 
+  val timeLabel = Label("Time Field:")
+  val timeField = new TimeField(model.time)
+  timeField.value.onChange { (_, _, newValue) => model.timeProperty.value = newValue }
+
   val dateTimeLabel = Label("Date Time Field:")
   val dateTimeField = new DateTimeField(model.datetime)
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
