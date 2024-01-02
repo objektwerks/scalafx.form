@@ -6,7 +6,6 @@ import scalafx.beans.property.ObjectProperty
 import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, Spinner}
 import scalafx.scene.layout.{HBox, Priority}
-import scalafx.scene.text.TextAlignment
 
 class TimeField(localTime: LocalTime) extends HBox:
   spacing = 3
@@ -15,11 +14,11 @@ class TimeField(localTime: LocalTime) extends HBox:
   val value = ObjectProperty[LocalTime](localTime)
 
   val labelHour = new Label:
-    textAlignment = TextAlignment.LEFT
+    prefHeight = 25
     text = "H:"
 
   val labelMinute = new Label:
-    textAlignment = TextAlignment.LEFT
+    prefHeight = 25
     text = "M:"
   
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localTime.getHour, amountToStepBy = 1)
