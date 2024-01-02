@@ -36,5 +36,6 @@ final case class Model(text: String = "nonempty",
       items = items,
       item = listItemProperty.value,
       isSelected = isSelectedProperty.value,
+      time = timeProperty.value,
       datetime = datetimeProperty.value
     )
