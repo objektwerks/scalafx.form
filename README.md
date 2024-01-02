@@ -2,6 +2,14 @@ ScalaFx Form
 ------------
 >ScalaFx custom form layout with assorted ( custom ) controls prototype using Scala 3.
 
+>Custom controls include:
+* DateTimeField
+* DoubleTextField
+* IntTextField
+* NonEmptyTextField
+* NumberSlider
+* TimeField
+
 Model
 -----
 * Form 1 --> * Field 1 --> 1 (Label, Region)
