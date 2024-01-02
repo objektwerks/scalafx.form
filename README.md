@@ -9,7 +9,7 @@ ScalaFx Form
 * NonEmptyTextField
 * NumberSlider
 * TimeField
-> All controls are ***self-validating***!
+> All custom controls are ***self-validating***!
 
 Model
 -----
