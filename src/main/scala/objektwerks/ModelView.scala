@@ -111,8 +111,9 @@ final class ModelView(model: Model) extends VBox:
     doubleTextField.text = model.double.toString
     intSlider.slider.value = model.int
     doubleSlider.slider.value = model.double
-    comboBox.value = model.items.head
     checkBox.selected = model.isSelected
+    choiceBox.value = model.choices.head
+    comboBox.value = model.items.head
     datePicker.value = model.date
     timeField.value.value = model.time
     dateTimeField.value.value = model.datetime
