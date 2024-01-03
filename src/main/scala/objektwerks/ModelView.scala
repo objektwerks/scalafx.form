@@ -49,6 +49,11 @@ final class ModelView(model: Model) extends VBox:
                     slider.value = model.double
                     slider.value.onChange { (_, _, newValue) => model.doubleRangeValueProperty.value = newValue.doubleValue }
 
+  val checkBoxLabel = Label("CheckBox:")
+  val checkBox = new CheckBox:
+    selected = model.isSelected
+    selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
+
   val choiceBoxLabel = Label("ChoiceBox:")
   val choiceBox = new ChoiceBox[String]:
   	items = ObservableBuffer.from(model.choices)
@@ -60,11 +65,6 @@ final class ModelView(model: Model) extends VBox:
   	items = ObservableBuffer.from(model.items)
   	value = model.items.head
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
-
-  val checkBoxLabel = Label("CheckBox:")
-  val checkBox = new CheckBox:
-    selected = model.isSelected
-    selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
 
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
@@ -85,8 +85,9 @@ final class ModelView(model: Model) extends VBox:
     doubleLabel -> doubleTextField,
     intSliderLabel -> intSlider,
     doubleSliderLabel -> doubleSlider,
-    comboBoxLabel -> comboBox,
     checkBoxLabel -> checkBox,
+    choiceBoxLabel -> choiceBox,
+    comboBoxLabel -> comboBox,
     dateLabel -> datePicker,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField
