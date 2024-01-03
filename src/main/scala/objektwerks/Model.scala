@@ -25,6 +25,7 @@ final case class Model(text: String = "nonempty",
   val doubleProperty = ObjectProperty[Double](this, "double", double)
   val intRangeValueProperty = ObjectProperty[Int](this, "intRangeValue", intRangeValue)
   val doubleRangeValueProperty = ObjectProperty[Double](this, "doubleRangeValue", doubleRangeValue)
+  val choiceProperty = ObjectProperty[String](this, "choice", choice)
   val listItemProperty = ObjectProperty[String](this, "listItem", item)
   val isSelectedProperty = ObjectProperty[Boolean](this, "isSelected", isSelected)
   val dateProperty = ObjectProperty[LocalDate](this, "date", date)
