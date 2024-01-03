@@ -16,6 +16,7 @@ ScalaFx Form
 * ChoiceBox
 * CombonBox
 * DatePicker
+>These standard controls are effectivelly ***self-validating***.
 
 Model
 -----
