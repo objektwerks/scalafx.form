@@ -11,6 +11,11 @@ ScalaFx Form
 * TimeField
 > All custom controls are ***self-validating***!
 
+>Standard controls include:
+* CheckBox
+* ChoiceBox
+* CombonBox
+
 Model
 -----
 * Form 1 --> * Field 1 --> 1 (Label, Region)
