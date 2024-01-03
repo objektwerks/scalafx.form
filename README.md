@@ -15,6 +15,7 @@ ScalaFx Form
 * CheckBox
 * ChoiceBox
 * CombonBox
+* DatePicker
 
 Model
 -----
