@@ -53,7 +53,7 @@ final class ModelView(model: Model) extends VBox:
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from(model.items)
   	value = model.items.head
-  comboBox.value.onChange { (_, _, newValue) => model.listItemProperty.value = newValue }
+  comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val checkBoxLabel = Label("CheckBox:")
   val checkBox = new CheckBox:
