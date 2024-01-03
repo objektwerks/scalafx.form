@@ -16,7 +16,7 @@ ScalaFx Form
 * ChoiceBox
 * CombonBox
 * DatePicker
->These standard controls are effectivelly ***self-validating***.
+>These standard controls are effectivelly ***self-validating***. But using a **SelectionModel** can return **null** values!!!
 
 Model
 -----
