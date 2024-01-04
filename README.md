@@ -22,7 +22,7 @@ Consequently, consider using a **ChangeListener**. See **ModelView** for example
 Model
 -----
 * Form 1 --> * Field 1 --> 1 (Label, Region)
-* Model 1 --> * ObjectProperty
+* Model 1 --> * ObjectProperty ( for each field )
 * ModelView 1 --> 1 Model, Form
 * ModelView 1 --> * Control
 * View 1 --> 1 ModelView ( typically mutliple named views )
