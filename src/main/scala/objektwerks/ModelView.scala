@@ -92,7 +92,7 @@ final class ModelView(model: Model) extends VBox:
     checkBoxLabel -> checkBox,
     choiceBoxLabel -> choiceBox,
     comboBoxLabel -> comboBox,
-    radioButtonLabel -> radioButton, // ToggleGroup is not a Region!
+    radioButtonLabel -> radioButton, // ToggleGroup is not a Node!
     dateLabel -> datePicker,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField
