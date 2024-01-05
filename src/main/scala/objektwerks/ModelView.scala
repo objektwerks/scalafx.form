@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Orientation, Pos}
-import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, RadioButton, Separator, ToggleGroup}
+import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, RadioButton, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -67,11 +67,8 @@ final class ModelView(model: Model) extends VBox:
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val radioButtonLabel = Label("RadioButton:")
-  val radioButton1 = RadioButton("1")
-  val radioButton2 = RadioButton("2")
-  val radioButtonGroup = ToggleGroup()
-  radioButton1.setToggleGroup(radioButtonGroup)
-  radioButton2.setToggleGroup(radioButtonGroup)
+  val radioButton = RadioButton("1")
+  radioButton.selected.onChange { (_, _, newValue ) => model.isRadioedProperty.value = newValue }
 
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
@@ -95,6 +92,7 @@ final class ModelView(model: Model) extends VBox:
     checkBoxLabel -> checkBox,
     choiceBoxLabel -> choiceBox,
     comboBoxLabel -> comboBox,
+    radioButtonLabel -> radioButton, // ToggleGroup is not a Region!
     dateLabel -> datePicker,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField
@@ -121,6 +119,7 @@ final class ModelView(model: Model) extends VBox:
     checkBox.selected = model.isChecked
     choiceBox.value = model.choices.head
     comboBox.value = model.items.head
+    radioButton.selected = model.isRadioed
     datePicker.value = model.date
     timeField.value.value = model.time
     dateTimeField.value.value = model.datetime
