@@ -16,6 +16,7 @@ ScalaFx Form
 * ChoiceBox
 * CombonBox
 * DatePicker
+* RadioButton ( ToggleGroup not usable at this time )
 >These standard controls are effectivelly ***self-validating***. **Warning**: Using a **SelectionModel** can return a **null** value!
 Consequently, consider using a **ChangeListener**. See **ModelView** for examples.
 
