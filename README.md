@@ -36,3 +36,7 @@ Build
 Run
 ---
 1. sbt run
+
+Resources
+---------
+* [Jenkov JavaFx](https://jenkov.com/tutorials/javafx/index.html)
