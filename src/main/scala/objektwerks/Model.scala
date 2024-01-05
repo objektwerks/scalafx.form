@@ -46,6 +46,7 @@ final case class Model(text: String = "nonempty",
       choice = choiceProperty.value,
       items = items,
       item = itemProperty.value,
+      isRadioed = isRadioedProperty.value,
       date = dateProperty.value,
       time = timeProperty.value,
       datetime = datetimeProperty.value
