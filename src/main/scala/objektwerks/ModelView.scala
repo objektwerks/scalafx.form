@@ -66,6 +66,8 @@ final class ModelView(model: Model) extends VBox:
   	value = model.items.head
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
+  val radioButtonLabel = Label("RadioButton:")
+
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
     value = model.date
