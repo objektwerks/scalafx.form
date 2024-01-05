@@ -52,7 +52,7 @@ final class ModelView(model: Model) extends VBox:
   val checkBoxLabel = Label("CheckBox:")
   val checkBox = new CheckBox:
     selected = model.isChecked
-    selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
+    selected.onChange { (_, _, newValue ) => model.isCheckedProperty.value = newValue }
 
   val choiceBoxLabel = Label("ChoiceBox:")
   val choiceBox = new ChoiceBox[String]:
