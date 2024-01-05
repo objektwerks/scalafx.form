@@ -51,7 +51,7 @@ final class ModelView(model: Model) extends VBox:
 
   val checkBoxLabel = Label("CheckBox:")
   val checkBox = new CheckBox:
-    selected = model.isSelected
+    selected = model.isChecked
     selected.onChange { (_, _, newValue ) => model.isSelectedProperty.value = newValue }
 
   val choiceBoxLabel = Label("ChoiceBox:")
@@ -118,7 +118,7 @@ final class ModelView(model: Model) extends VBox:
     doubleTextField.text = model.double.toString
     intSlider.slider.value = model.int
     doubleSlider.slider.value = model.double
-    checkBox.selected = model.isSelected
+    checkBox.selected = model.isChecked
     choiceBox.value = model.choices.head
     comboBox.value = model.items.head
     datePicker.value = model.date
