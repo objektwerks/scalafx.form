@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Orientation, Pos}
-import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, Separator}
+import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, RadioButton, Separator, ToggleGroup}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -67,6 +67,11 @@ final class ModelView(model: Model) extends VBox:
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val radioButtonLabel = Label("RadioButton:")
+  val radioButton1 = RadioButton("1")
+  val radioButton2 = RadioButton("2")
+  val radioButtonGroup = ToggleGroup()
+  radioButton1.setToggleGroup(radioButtonGroup)
+  radioButton2.setToggleGroup(radioButtonGroup)
 
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
