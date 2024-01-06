@@ -135,6 +135,7 @@ final class ModelView(model: Model) extends VBox:
     radioButton.selected = model.isRadioed
     listView.getSelectionModel.selectFirst
     datePicker.value = model.date
+    dateField.value.value = model.date
     timeField.value.value = model.time
     dateTimeField.value.value = model.datetime
     println(s"*** Reset model: ${model.propertiesToModel}")
