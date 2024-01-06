@@ -13,15 +13,15 @@ class DateField(localDate: LocalDate) extends HBox:
 
   val value = ObjectProperty[LocalDate](localDate)
 
-  val labelYear = new Label:
+  val yearLabel = new Label:
     prefHeight = 25
     text = "YYYY:"
 
-  val labelMonth = new Label:
+  val monthLabel = new Label:
     prefHeight = 25
     text = "MM:"
 
-  val labelDay = new Label:
+  val dayLabel = new Label:
     prefHeight = 25
     text = "DD:"
 
@@ -37,5 +37,5 @@ class DateField(localDate: LocalDate) extends HBox:
   daySpinner.prefWidth = 75
   daySpinner.value.onChange { (_, _, newValue) => value.value = value.value.withDayOfMonth(newValue) }
 
-  children = List(labelYear, yearSpinner, labelMonth, monthSpinner, labelDay, daySpinner)
+  children = List(yearLabel, yearSpinner, monthLabel, monthSpinner, dayLabel, daySpinner)
   HBox.setHgrow(this, Priority.Always)
