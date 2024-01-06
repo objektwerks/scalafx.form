@@ -13,11 +13,11 @@ class TimeField(localTime: LocalTime) extends HBox:
 
   val value = ObjectProperty[LocalTime](localTime)
 
-  val labelHour = new Label:
+  val hourLabel = new Label:
     prefHeight = 25
     text = "H:"
 
-  val labelMinute = new Label:
+  val minuteLabel = new Label:
     prefHeight = 25
     text = "M:"
   
@@ -29,7 +29,7 @@ class TimeField(localTime: LocalTime) extends HBox:
   minuteSpinner.prefWidth = 75
   minuteSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withMinute(newValue) }
 
-  children = List(labelHour, hourSpinner, labelMinute, minuteSpinner)
+  children = List(hourLabel, hourSpinner, minuteLabel, minuteSpinner)
   HBox.setHgrow(this, Priority.Always)
 
   def time = localTime.withHour( hourSpinner.value.value ).withMinute( minuteSpinner.value.value )
