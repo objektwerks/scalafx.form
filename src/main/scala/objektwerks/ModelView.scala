@@ -70,6 +70,9 @@ final class ModelView(model: Model) extends VBox:
   val radioButton = RadioButton("0 / 1")
   radioButton.selected.onChange { (_, _, newValue ) => model.isRadioedProperty.value = newValue }
 
+  val listViewLabel = Label("ListView:")
+
+
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
     value = model.date
