@@ -124,18 +124,3 @@ final class ModelView(model: Model) extends VBox:
 
   def reset(): Unit =
     println(s"*** Modified model: ${model.propertiesToModel}")
-    textField.text = model.text
-    intTextField.text = model.int.toString
-    doubleTextField.text = model.double.toString
-    intSlider.slider.value = model.int
-    doubleSlider.slider.value = model.double
-    checkBox.selected = model.isChecked
-    choiceBox.value = model.choices.head
-    comboBox.value = model.items.head
-    radioButton.selected = model.isRadioed
-    listView.getSelectionModel.selectFirst
-    datePicker.value = model.date
-    dateField.value.value = model.date
-    timeField.value.value = model.time
-    dateTimeField.value.value = model.datetime
-    println(s"*** Reset model: ${model.propertiesToModel}")
