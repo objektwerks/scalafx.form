@@ -13,7 +13,7 @@ final class Form(fields: List[(Label, Node)]) extends GridPane:
   GridPane.setVgrow(this, Priority.Always)
 
   var row = 0
-  for ((label, region) <- fields)
+  for ((label, node) <- fields)
     add(label, columnIndex = 0, rowIndex = row)
-    add(region, columnIndex = 1, rowIndex = row)
+    add(node, columnIndex = 1, rowIndex = row)
     row += 1
