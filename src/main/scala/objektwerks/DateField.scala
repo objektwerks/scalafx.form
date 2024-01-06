@@ -34,3 +34,5 @@ class DateField(localDate: LocalDate) extends HBox:
   monthSpinner.value.onChange { (_, _, newValue) => value.value = value.value.withMonth(newValue) }
 
   val daySpinner = Spinner[Int](min = 1, max = 31, initialValue = localDate.getDayOfMonth, amountToStepBy = 1)
+  daySpinner.prefWidth = 75
+  daySpinner.value.onChange { (_, _, newValue) => value.value = value.value.withDayOfMonth(newValue) }
