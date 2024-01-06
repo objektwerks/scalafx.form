@@ -39,3 +39,5 @@ class DateField(localDate: LocalDate) extends HBox:
 
   children = List(yearLabel, yearSpinner, monthLabel, monthSpinner, dayLabel, daySpinner)
   HBox.setHgrow(this, Priority.Always)
+
+  def date = localDate.withYear( yearSpinner.value.value ).withMonth( monthSpinner.value.value ).withDayOfMonth( daySpinner.value.value )
