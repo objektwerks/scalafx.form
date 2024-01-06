@@ -15,11 +15,11 @@ class TimeField(localTime: LocalTime) extends HBox:
 
   val hourLabel = new Label:
     prefHeight = 25
-    text = "H:"
+    text = "HH:"
 
   val minuteLabel = new Label:
     prefHeight = 25
-    text = "M:"
+    text = "MM:"
   
   val hourSpinner = Spinner[Int](min = 0, max = 23, initialValue = localTime.getHour, amountToStepBy = 1)
   hourSpinner.prefWidth = 75
