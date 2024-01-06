@@ -1,8 +1,9 @@
 package objektwerks
 
+import scalafx.Includes.*
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Orientation, Pos}
-import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, RadioButton, Separator}
+import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, ListView, RadioButton, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -71,7 +72,9 @@ final class ModelView(model: Model) extends VBox:
   radioButton.selected.onChange { (_, _, newValue ) => model.isRadioedProperty.value = newValue }
 
   val listViewLabel = Label("ListView:")
-
+  val listView = new ListView[String]:
+    items = ObservableBuffer.from(model.items)
+  listView.getSelectionModel.selectedItemProperty.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val dateLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
