@@ -83,10 +83,10 @@ final class ModelView(model: Model) extends VBox:
   datePicker.onAction = { _ => model.dateProperty.value = datePicker.value.value }
 
   val dateLabel = Label("Date Field:")
-
+  val dateField = DateField(model.date)
 
   val timeLabel = Label("Time Field:")
-  val timeField = new TimeField(model.time)
+  val timeField = TimeField(model.time)
   timeField.value.onChange { (_, _, newValue) => model.timeProperty.value = newValue }
 
   val dateTimeLabel = Label("Date Time Field:")
