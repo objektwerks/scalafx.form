@@ -5,7 +5,7 @@ import java.time.LocalDate
 import scalafx.beans.property.ObjectProperty
 import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, Spinner}
-import scalafx.scene.layout.HBox
+import scalafx.scene.layout.{HBox, Priority}
 
 class DateField(localDate: LocalDate) extends HBox:
   spacing = 3
@@ -36,3 +36,6 @@ class DateField(localDate: LocalDate) extends HBox:
   val daySpinner = Spinner[Int](min = 1, max = 31, initialValue = localDate.getDayOfMonth, amountToStepBy = 1)
   daySpinner.prefWidth = 75
   daySpinner.value.onChange { (_, _, newValue) => value.value = value.value.withDayOfMonth(newValue) }
+
+  children = List(labelYear, yearSpinner, labelMonth, monthSpinner, labelDay, daySpinner)
+  HBox.setHgrow(this, Priority.Always)
