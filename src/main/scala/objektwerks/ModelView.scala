@@ -77,10 +77,13 @@ final class ModelView(model: Model) extends VBox:
     prefHeight = 85.0
   listView.selectionModel().selectedItem.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
-  val dateLabel = Label("Date Picker:")
+  val datePickerLabel = Label("Date Picker:")
   val datePicker = new DatePicker:
     value = model.date
   datePicker.onAction = { _ => model.dateProperty.value = datePicker.value.value }
+
+  val dateLabel = Label("Date Field:")
+
 
   val timeLabel = Label("Time Field:")
   val timeField = new TimeField(model.time)
@@ -101,7 +104,7 @@ final class ModelView(model: Model) extends VBox:
     comboBoxLabel -> comboBox,
     radioButtonLabel -> radioButton, // ToggleGroup is not a Node!
     listViewLabel -> listView,
-    dateLabel -> datePicker,
+    datePickerLabel -> datePicker,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField
   )
