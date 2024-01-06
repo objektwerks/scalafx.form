@@ -74,6 +74,7 @@ final class ModelView(model: Model) extends VBox:
   val listViewLabel = Label("ListView:")
   val listView = new ListView[String]:
     items = ObservableBuffer.from(model.items)
+    prefHeight = 85.0
   listView.getSelectionModel.selectedItemProperty.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val dateLabel = Label("Date Picker:")
