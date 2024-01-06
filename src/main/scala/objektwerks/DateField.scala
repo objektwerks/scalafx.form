@@ -4,7 +4,7 @@ import java.time.LocalDate
 
 import scalafx.beans.property.ObjectProperty
 import scalafx.geometry.Insets
-import scalafx.scene.control.Label
+import scalafx.scene.control.{Label, Spinner}
 import scalafx.scene.layout.HBox
 
 class DateField(localDate: LocalDate) extends HBox:
@@ -24,3 +24,7 @@ class DateField(localDate: LocalDate) extends HBox:
   val labelDay = new Label:
     prefHeight = 25
     text = "DD:"
+
+  val yearSpinner = Spinner[Int](min = localDate.getYear - 1, max = localDate.getYear, initialValue = localDate.getYear, amountToStepBy = 1)
+  val monthSpinner = Spinner[Int](min = 1, max = 12, initialValue = localDate.getMonthValue, amountToStepBy = 1)
+  val daySpinner = Spinner[Int](min = 1, max = 31, initialValue = localDate.getDayOfMonth, amountToStepBy = 1)
