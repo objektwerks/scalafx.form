@@ -99,6 +99,7 @@ final class ModelView(model: Model) extends VBox:
     choiceBoxLabel -> choiceBox,
     comboBoxLabel -> comboBox,
     radioButtonLabel -> radioButton, // ToggleGroup is not a Node!
+    listViewLabel -> listView,
     dateLabel -> datePicker,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField
