@@ -20,3 +20,7 @@ class DateField(localDate: LocalDate) extends HBox:
   val labelMonth = new Label:
     prefHeight = 25
     text = "MM:"
+
+  val labelDay = new Label:
+    prefHeight = 25
+    text = "DD:"
