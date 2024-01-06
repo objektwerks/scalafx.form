@@ -127,6 +127,7 @@ final class ModelView(model: Model) extends VBox:
     choiceBox.value = model.choices.head
     comboBox.value = model.items.head
     radioButton.selected = model.isRadioed
+    listView.getSelectionModel.selectFirst
     datePicker.value = model.date
     timeField.value.value = model.time
     dateTimeField.value.value = model.datetime
