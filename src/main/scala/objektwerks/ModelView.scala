@@ -3,7 +3,7 @@ package objektwerks
 import scalafx.Includes.*
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Orientation, Pos}
-import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, ListView, RadioButton, Separator}
+import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, ListView, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
 import NumberSlider.*
@@ -67,10 +67,6 @@ final class ModelView(model: Model) extends VBox:
   	value = model.items.head
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
-  val radioButtonLabel = Label("RadioButton:")
-  val radioButton = RadioButton("0 / 1")
-  radioButton.selected.onChange { (_, _, newValue ) => model.isRadioedProperty.value = newValue }
-
   val listViewLabel = Label("ListView:")
   val listView = new ListView[String]:
     items = ObservableBuffer.from(model.items)
@@ -103,7 +99,6 @@ final class ModelView(model: Model) extends VBox:
     checkBoxLabel -> checkBox,
     choiceBoxLabel -> choiceBox,
     comboBoxLabel -> comboBox,
-    radioButtonLabel -> radioButton, // ToggleGroup is not a Node!
     listViewLabel -> listView,
     datePickerLabel -> datePicker,
     dateLabel -> dateField,
