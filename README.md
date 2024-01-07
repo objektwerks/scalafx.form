@@ -27,11 +27,10 @@ Warning
 
 Model
 -----
-* Form 1 --> * Field 1 --> 1 (Label, Node)
 * Model 1 --> * ObjectProperty ( for each model field )
 * ModelView 1 --> 1 Model, Form
-* ModelView 1 --> * Control
-* View 1 --> 1 ModelView ( typically mutliple named views )
+* Form 1 --> * Field 1 --> 1 (Label, Node)
+* View 1 --> 1-* ModelView ( typically mutliple named model views )
 * App 1 --> 1 View
 
 Build
