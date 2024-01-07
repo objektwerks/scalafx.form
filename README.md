@@ -18,9 +18,12 @@ ScalaFx Form
 * CombonBox
 * DatePicker
 * ListView
-* RadioButton ( ToggleGroup is not a Node! )
 >These standard controls are effectivelly ***self-validating***. **Warning**: Using a **SelectionModel** can return a **null** value!
 Consequently, consider using a **ChangeListener**. See **ModelView** for examples.
+
+Warning
+-------
+>ToggleButton and RadioButton, when wrapped in a ToggleGroup, can't be added to a Form - not being a Node.
 
 Model
 -----
