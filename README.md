@@ -23,7 +23,7 @@ Consequently, consider using a **ChangeListener**. See **ModelView** for example
 
 Warning
 -------
->ToggleButton and RadioButton, when wrapped in a ToggleGroup, can't be added to a Form - not being a Node.
+>ToggleButton and RadioButton, when wrapped in a ToggleGroup, can't be added to a Form - not being a Node or subclass of Node.
 
 Model
 -----
