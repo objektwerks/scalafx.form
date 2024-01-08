@@ -105,7 +105,7 @@ final class ModelView(model: Model) extends VBox:
 
   val form = Form(fields)
 
-  val submitButton = new Button:
+  val submit = new Button:
     alignment = Pos.CENTER
     text = "Submit"
     disable = false
@@ -116,6 +116,6 @@ final class ModelView(model: Model) extends VBox:
     Separator(Orientation.Horizontal),
     form,
     Separator(Orientation.Horizontal),
-    submitButton
+    submit
   )
   VBox.setVgrow(this, Priority.Always)
