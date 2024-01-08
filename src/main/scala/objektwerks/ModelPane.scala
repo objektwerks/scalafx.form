@@ -11,7 +11,7 @@ class ModelPane(model: Model) extends VBox:
   padding = Insets(6)
   spacing = 6
 
-  val title = Label("~ Form ~")
+  val title = Label("~ Model ~")
 
   val textLabel = Label("Text Field:")
   val textField = new NonEmptyTextField:
