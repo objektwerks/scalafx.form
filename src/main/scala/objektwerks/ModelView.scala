@@ -56,9 +56,9 @@ final class ModelView(model: Model) extends VBox:
 
   val choiceBoxLabel = Label("ChoiceBox:")
   val choiceBox = new ChoiceBox[String]:
-  	items = ObservableBuffer.from(model.choices)
-  	value = model.choices.head
-  choiceBox.value.onChange { (_, _, newValue) => model.choiceProperty.value = newValue }
+  	items = ObservableBuffer.from(model.items)
+  	value = model.items.head
+  choiceBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
   val comboBoxLabel = Label("ComboBox:")
   val comboBox = new ComboBox[String]:
