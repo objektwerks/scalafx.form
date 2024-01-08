@@ -14,7 +14,6 @@ final class ModelView(model: Model) extends VBox:
   spacing = 6
 
   val title = Label("~ Form ~")
-  val separator = Separator(Orientation.Horizontal)
 
   val textLabel = Label("Text Field:")
   val textField = new NonEmptyTextField:
@@ -114,5 +113,11 @@ final class ModelView(model: Model) extends VBox:
     disable = false
     onAction = { _ => println(s"*** Model: ${model.propertiesToModel}") }
  
-  children = List(title, separator, form, submitButton)
+  children = List(
+    title,
+    Separator(Orientation.Horizontal),
+    form,
+    Separator(Orientation.Horizontal),
+    submitButton
+  )
   VBox.setVgrow(this, Priority.Always)
