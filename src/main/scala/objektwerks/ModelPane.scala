@@ -6,7 +6,7 @@ import scalafx.geometry.{Insets, Orientation, Pos}
 import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, ListView, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
-final class ModelView(model: Model) extends VBox:
+final class ModelPane(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
