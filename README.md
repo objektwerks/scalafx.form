@@ -28,9 +28,9 @@ Warning
 Model
 -----
 * Model 1 --> * ObjectProperty ( for each model field )
-* ModelView 1 --> 1 Model, Form
+* ModelPane 1 --> 1 Model, Form
 * Form 1 --> * Field 1 --> 1 (Label, Node)
-* View 1 --> 1-* ModelView ( typically mutliple named model views )
+* View 1 --> 1-* ModelPane ( typically mutliple named model panes, with optional named model dialogs )
 * App 1 --> 1 View
 
 Build
