@@ -13,6 +13,9 @@
 .combo-box {
   -fx-text-fill: navy
 }
+.date-picker {
+  -fx-text-fill: navy
+}
 .label {
   -fx-text-fill: navy
 }
