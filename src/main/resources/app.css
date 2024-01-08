@@ -10,6 +10,9 @@
 .choice-box {
   -fx-text-fill: navy
 }
+.combo-box {
+  -fx-text-fill: navy
+}
 .label {
   -fx-text-fill: navy
 }
