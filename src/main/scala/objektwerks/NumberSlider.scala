@@ -35,5 +35,5 @@ class NumberSlider(textFieldText: String,
   padding = Insets(6)
   children = List(textField, slider)
 
-  def valueAsDouble: Double = slider.value.toDouble
-  def valueAsInt: Int = slider.value.toInt
+  def toDouble: Double = slider.value.toDouble
+  def toInt: Int = slider.value.toInt
