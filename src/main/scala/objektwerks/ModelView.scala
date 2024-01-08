@@ -112,11 +112,7 @@ final class ModelView(model: Model) extends VBox:
     alignment = Pos.CENTER
     text = "Submit"
     disable = false
-    onAction = { _ => exit() }
+    onAction = { _ => println(s"*** Model: ${model.propertiesToModel}") }
  
   children = List(title, separator, form, submitButton)
   VBox.setVgrow(this, Priority.Always)
-
-  def exit(): Unit =
-    println(s"*** Modified model: ${model.propertiesToModel}")
-    System.exit(0)
