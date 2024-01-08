@@ -6,8 +6,6 @@ import scalafx.geometry.{Insets, Orientation, Pos}
 import scalafx.scene.control.{Button, CheckBox, ChoiceBox, ComboBox, DatePicker, Label, ListView, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
-import NumberSlider.*
-
 final class ModelView(model: Model) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
@@ -32,7 +30,7 @@ final class ModelView(model: Model) extends VBox:
 
   val intSliderLabel = Label("Int Slider:")
   val intSlider = new NumberSlider(textFieldText = model.int.toString,
-                                   textFieldFormatConverter = integerFormatConverter):
+                                   textFieldFormatConverter = NumberSlider.integerFormatConverter):
                     slider.min = model.intRange.start
                     slider.max = model.intRange.end
                     slider.majorTickUnit = 1
@@ -41,7 +39,7 @@ final class ModelView(model: Model) extends VBox:
 
   val doubleSliderLabel = Label("Double Slider:")
   val doubleSlider = new NumberSlider(textFieldText = model.double.toString,
-                                      textFieldFormatConverter = decimalFormatConverter):
+                                      textFieldFormatConverter = NumberSlider.decimalFormatConverter):
                     slider.min = model.doubleRange.start.toDouble
                     slider.max = model.doubleRange.end.toDouble
                     slider.minorTickCount = 1
