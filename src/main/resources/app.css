@@ -4,6 +4,9 @@
 .button .cancel {
   -fx-text-fill: navy
 }
+.check-box {
+  -fx-text-fill: navy
+}
 .label {
   -fx-text-fill: navy
 }
