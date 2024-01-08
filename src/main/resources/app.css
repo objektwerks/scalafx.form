@@ -7,6 +7,9 @@
 .label {
   -fx-text-fill: navy
 }
+.list-view {
+  -fx-text-fill: navy
+}
 .slider .axis {
   -fx-tick-label-fill: navy
 }
