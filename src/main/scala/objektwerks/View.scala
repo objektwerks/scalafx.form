@@ -5,7 +5,7 @@ import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
 
 class View:
-  val modelPane = ModelPane( Model() )
+  val modelPane = ModelPane( ModelForm( Model() ) )
   
   val contentPane = new VBox:
     spacing = 6
