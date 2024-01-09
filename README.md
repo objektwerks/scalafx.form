@@ -27,7 +27,7 @@ Consequently, consider using a **ChangeListener**. See **ModePane** for examples
 
 Notes
 -----
-1. ToggleButton and RadioButton, when wrapped in a ToggleGroup, can't be added to a Form - not being a Node or subclass of Node.
+1. ```ToggleButton``` and ```RadioButton```, when wrapped in a ```ToggleGroup```, can't be added to a ```Form``` - not being a ```Node``` or subclass of ```Node```.
 
 Model
 -----
