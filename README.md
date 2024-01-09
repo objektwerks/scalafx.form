@@ -34,9 +34,9 @@ Model
 * View 1 --> 1 Model, MenuBar, ModelPane
 * App 1 --> 1 View
 
->Typically ```ModelForm``` would not be required. Instead, a ```Form``` would be built directly in ```ModelDialog```.
+>Typically, a ```ModelForm``` would not be required. Instead, a ```Form``` would be built directly in a ```ModelDialog```.
 
->And a ```ModelPane``` would not contain a ```ModelForm```. Instead, it could a list of ```Models```.
+>And a ```ModelPane``` would not contain a ```ModelForm```. Instead, it would contain a list of ```Models```.
 
 Build
 -----
