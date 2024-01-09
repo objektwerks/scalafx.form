@@ -12,7 +12,7 @@ class ModelDialog(form: ModelForm) extends Dialog[Model]:
   headerText = "~ Model ~"
 
   dialogPane().content = new VBox:
-    children = List(Separator(Orientation.Horizontal), form)
+    children = List(Separator(Orientation.Horizontal), form, Separator(Orientation.Horizontal))
 
   val submitButtonType = new ButtonType("Submit", ButtonData.OKDone)
   dialogPane().buttonTypes = List(submitButtonType, ButtonType.Cancel)
