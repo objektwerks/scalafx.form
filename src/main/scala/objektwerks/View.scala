@@ -8,7 +8,11 @@ import scalafx.scene.control.{Menu, MenuBar, MenuItem, SeparatorMenuItem}
 class View:
   val model = Model()
 
-  val dialog = MenuItem("Dailog")
+  val dialog = new MenuItem("Dailog"):
+    onAction = { _ =>
+      println(s"*** Model: ${model.propertiesToModel}")
+    }
+
   val exit = new MenuItem("Exit"):
     onAction = { _ => System.exit(0) }
 
