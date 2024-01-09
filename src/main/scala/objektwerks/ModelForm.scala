@@ -1,7 +1,5 @@
 package objektwerks
 
-package objektwerks
-
 import scalafx.Includes.*
 import scalafx.collections.ObservableBuffer
 import scalafx.geometry.{Insets, Pos}
