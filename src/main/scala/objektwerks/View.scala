@@ -8,7 +8,7 @@ import scalafx.scene.control.{Menu, MenuBar}
 class View:
   val model = Model()
 
-  val menu = Menu("Dialog")
+  val menu = Menu("Menu")
   val menuBar = new MenuBar():
     menus = List(menu)
 
