@@ -45,24 +45,24 @@ class ModelForm(val model: Model) extends VBox:
                     slider.value = model.double
                     slider.value.onChange { (_, _, newValue) => model.doubleRangeValueProperty.value = newValue.doubleValue }
 
-  val checkBoxLabel = Label("CheckBox:")
+  val checkBoxLabel = Label("Check Box:")
   val checkBox = new CheckBox:
     selected = model.isChecked
     selected.onChange { (_, _, newValue ) => model.isCheckedProperty.value = newValue }
 
-  val choiceBoxLabel = Label("ChoiceBox:")
+  val choiceBoxLabel = Label("Choice Box:")
   val choiceBox = new ChoiceBox[String]:
   	items = ObservableBuffer.from(model.items)
   	value = model.items.head
   choiceBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
-  val comboBoxLabel = Label("ComboBox:")
+  val comboBoxLabel = Label("Combo Box:")
   val comboBox = new ComboBox[String]:
   	items = ObservableBuffer.from(model.items)
   	value = model.items.head
   comboBox.value.onChange { (_, _, newValue) => model.itemProperty.value = newValue }
 
-  val listViewLabel = Label("ListView:")
+  val listViewLabel = Label("List View:")
   val listView = new ListView[String]:
     items = ObservableBuffer.from(model.items)
     prefHeight = 85.0
