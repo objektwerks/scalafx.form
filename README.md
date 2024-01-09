@@ -36,7 +36,7 @@ Model
 * ModelForm 1 --> 1 Model, Form
 * ModelPane 1 --> 1 ModelForm
 * ModelDialog 1 --> 1 ModelForm
-* MenuBar 1 --> 1 Menu 1 --> * MenuItem
+* MenuBar 1 --> 1 Menu 1 --> * MenuItem ( dialog, exit )
 * View 1 --> 1 Model, MenuBar, ModelPane
 * App 1 --> 1 View
 
