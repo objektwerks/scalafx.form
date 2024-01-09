@@ -8,18 +8,18 @@ import scalafx.scene.control.{Menu, MenuBar, MenuItem, SeparatorMenuItem}
 class View:
   val model = Model()
 
-  val dialog = new MenuItem("Dailog"):
+  val modelDialogMenuItem = new MenuItem("Dailog"):
     onAction = { _ =>
       ModelDialog( ModelForm(model) ).showAndWait() match
         case Some(model: Model) => println(s"*** Model: ${model.propertiesToModel}")
         case _ =>
     }
 
-  val exit = new MenuItem("Exit"):
+  val exitMenuItem = new MenuItem("Exit"):
     onAction = { _ => System.exit(0) }
 
   val menu = new Menu("Menu"):
-    items = List(dialog, SeparatorMenuItem(), exit)
+    items = List(modelDialogMenuItem, SeparatorMenuItem(), exitMenuItem)
 
   val menuBar = new MenuBar():
     menus = List(menu)
