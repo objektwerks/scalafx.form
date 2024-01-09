@@ -11,7 +11,7 @@ class View:
   val modelDialogMenuItem = new MenuItem("Dailog"):
     onAction = { _ =>
       ModelDialog( ModelForm(model) ).showAndWait() match
-        case Some(model: Model) => println(s"*** Model: ${model.propertiesToModel}")
+        case Some(model: Model) => println(s"*** Model Dialog: ${model.propertiesToModel}")
         case _ =>
     }
 
