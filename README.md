@@ -50,4 +50,5 @@ Run
 
 Resources
 ---------
+* [JavaFx 21 Javadoc](https://openjfx.io/javadoc/21/)
 * [Jenkov JavaFx](https://jenkov.com/tutorials/javafx/index.html)
