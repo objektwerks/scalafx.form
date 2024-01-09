@@ -36,7 +36,8 @@ Model
 * ModelForm 1 --> 1 Model, Form
 * ModelPane 1 --> 1 ModelForm
 * ModelDialog 1 --> 1 ModelForm
-* View 1 --> 1-* ModelPane ( typically mutliple named model panes, with optional named model dialogs )
+* MenuBar 1 --> 1 Menu 1 --> * MenuItem
+* View 1 --> 1 Model, MenuBar, ModelPane
 * App 1 --> 1 View
 
 Build
