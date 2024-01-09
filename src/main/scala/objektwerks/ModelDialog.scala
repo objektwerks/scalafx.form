@@ -1,7 +1,7 @@
 package objektwerks
 
 import scalafx.Includes.*
-import scalafx.geometry.Orientation
+import scalafx.geometry.{Orientation, Pos}
 import scalafx.scene.control.{ButtonType, Dialog, Separator}
 import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.scene.layout.VBox
@@ -12,6 +12,7 @@ class ModelDialog(form: ModelForm) extends Dialog[Model]:
   headerText = "~ Model ~"
 
   dialogPane().content = new VBox:
+    alignment = Pos.CENTER
     children = List(Separator(Orientation.Horizontal), form, Separator(Orientation.Horizontal))
 
   val submitButtonType = new ButtonType("Submit", ButtonData.OKDone)
