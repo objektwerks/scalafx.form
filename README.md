@@ -1,12 +1,10 @@
 ScalaFx Form
 ------------
->ScalaFx ***custom*** form layout with assorted ***custom*** controls prototype using Scala 3.
+>ScalaFx ***custom*** form layout - to include assorted ***custom*** controls - using Scala 3.
 
 >Typically ```ModelForm``` would not be required. Instead, a ```Form``` would be built directly in ```ModelDialog```.
 
 >A ```ModelPane``` would not contain a ```ModelForm``` either. Instead, it could a list of ```Models```.
-
->But, then, this is an exploratative prototype. :)
 
 >Custom controls include:
 * DateField
