@@ -4,7 +4,7 @@ ScalaFx Form
 
 >Typically ```ModelForm``` would not be required; and, instead, be built directly in ```ModelDialog```.
 
->```ModelPane``` would not contain ```ModelForm```; and, instead, be built as ```ModelsPane```, listing ```Models```.
+>```ModelPane``` would not contain a ```ModelForm```; and, instead, be built as a ```ModelsPane```, listing ```Models```.
 
 >But, then, this is an exploratative prototype. :)
 
