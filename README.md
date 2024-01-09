@@ -6,7 +6,7 @@ ScalaFx Form
 
 >```ModelPane``` would not contain ```ModelForm```; and, instead, be built as ```ModelsPane```, listing ```Models```.
 
->But, then, this is a prototype. :)
+>But, then, this is an exploratative prototype. :)
 
 >Custom controls include:
 * DateField
