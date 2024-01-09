@@ -9,7 +9,8 @@ class View:
   val model = Model()
 
   val dialog = MenuItem("Dailog")
-  val exit = MenuItem("Exit")
+  val exit = new MenuItem("Exit"):
+    onAction = { _ => System.exit(0) }
 
   val menu = new Menu("Menu"):
     items = List(dialog, SeparatorMenuItem(), exit)
