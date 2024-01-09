@@ -10,7 +10,9 @@ class View:
 
   val dialog = new MenuItem("Dailog"):
     onAction = { _ =>
-      println(s"*** Model: ${model.propertiesToModel}")
+      ModelDialog( ModelForm(model) ).showAndWait() match
+        case Some(model: Model) => println(s"*** Model: ${model.propertiesToModel}")
+        case _ =>
     }
 
   val exit = new MenuItem("Exit"):
