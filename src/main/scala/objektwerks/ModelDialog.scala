@@ -16,3 +16,7 @@ class ModelDialog(form: ModelForm) extends Dialog[Model]:
 
   val submitButtonType = new ButtonType("Submit", ButtonData.OKDone)
   dialogPane().buttonTypes = List(submitButtonType, ButtonType.Cancel)
+
+  resultConverter = dialogButton =>
+    if dialogButton == submitButtonType then form.model.propertiesToModel
+    else null
