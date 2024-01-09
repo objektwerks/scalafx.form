@@ -3,12 +3,17 @@ package objektwerks
 import scalafx.geometry.Insets
 import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
-import scalafx.scene.control.{Menu, MenuBar}
+import scalafx.scene.control.{Menu, MenuBar, MenuItem, SeparatorMenuItem}
 
 class View:
   val model = Model()
 
-  val menu = Menu("Menu")
+  val dialog = MenuItem("Dailog")
+  val exit = MenuItem("Exit")
+
+  val menu = new Menu("Menu"):
+    items = List(dialog, SeparatorMenuItem(), exit)
+
   val menuBar = new MenuBar():
     menus = List(menu)
 
