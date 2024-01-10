@@ -32,8 +32,9 @@ Model
 * ModelPane 1 --> 1 ModelForm
 * ModelDialog 1 --> 1 ModelForm
 * MenuBar 1 --> 1 Menu 1 --> * MenuItem ( dialog, exit )
+* Menu 1 -- build --> MenuBar ( objektwerks menu object )
 * View 1 --> 1 Model, MenuBar, ModelPane
-* App 1 --> 1 View
+* App 1 --> 1 Model, View
 
 >Typically, a ```ModelForm``` would not be required. Instead, a ```Form``` would be built directly in a ```ModelDialog```.
 
