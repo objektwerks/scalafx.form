@@ -17,6 +17,5 @@ object Menu:
     val menu = new Menu("Menu"):
       items = List(dialogMenuItem, SeparatorMenuItem(), exitMenuItem)
 
-    val menuBar = new MenuBar():
+    new MenuBar():
       menus = List(menu)
-    menuBar
