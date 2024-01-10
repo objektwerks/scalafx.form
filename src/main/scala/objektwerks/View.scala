@@ -5,9 +5,7 @@ import scalafx.scene.Scene
 import scalafx.scene.layout.VBox
 import scalafx.scene.control.{Menu, MenuBar, MenuItem, SeparatorMenuItem}
 
-class View:
-  val model = Model()
-
+class View(model: Model):
   val dialogMenuItem = new MenuItem("Dialog"):
     onAction = { _ =>
       ModelDialog( ModelForm(model) ).showAndWait() match
