@@ -2,7 +2,9 @@ ScalaFx Form
 ------------
 >ScalaFx ***custom*** form layout - to include assorted ***custom*** controls - using Scala 3.
 
->Custom controls include:
+Custom Controls
+---------------
+> All custom controls are ***self-validating***!
 * DateField
 * DateTimeField
 * DoubleTextField
@@ -10,7 +12,6 @@ ScalaFx Form
 * NonEmptyTextField
 * NumberSlider
 * TimeField
-> All custom controls are ***self-validating***!
 
 >Standard controls include:
 * CheckBox
