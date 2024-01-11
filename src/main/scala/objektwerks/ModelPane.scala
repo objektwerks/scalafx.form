@@ -4,7 +4,7 @@ import scalafx.geometry.{Insets, Orientation, Pos}
 import scalafx.scene.control.{Button, Label, Separator}
 import scalafx.scene.layout.{Priority, VBox}
 
-class ModelPane(form: ModelForm) extends VBox:
+final class ModelPane(form: ModelForm) extends VBox:
   alignment = Pos.CENTER
   padding = Insets(6)
   spacing = 6
