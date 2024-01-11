@@ -6,7 +6,7 @@ import scalafx.scene.control.{ButtonType, Dialog, Label, Separator}
 import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.scene.layout.VBox
 
-class ModelDialog(form: ModelForm) extends Dialog[Model]:
+final class ModelDialog(form: ModelForm) extends Dialog[Model]:
   initOwner(App.stage)
   title = "Model"
 
