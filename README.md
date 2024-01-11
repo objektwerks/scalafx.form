@@ -1,6 +1,6 @@
 ScalaFx Form
 ------------
->ScalaFx ***custom*** form layout - to include ***custom*** controls - using Scala 3.
+>ScalaFx *custom* form layout and *custom* controls using Scala 3.
 
 Custom Controls
 ---------------
