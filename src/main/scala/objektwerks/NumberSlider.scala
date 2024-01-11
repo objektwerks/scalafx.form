@@ -14,8 +14,8 @@ object NumberSlider:
   def decimalFormatConverter: FormatStringConverter[Number] = FormatStringConverter[Number](decimalFormat)
   def integerFormatConverter: FormatStringConverter[Number] = FormatStringConverter[Number](integerFormat)
 
-class NumberSlider(textFieldText: String,
-                   textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
+final class NumberSlider(textFieldText: String,
+                         textFieldFormatConverter: FormatStringConverter[Number]) extends HBox:
   val slider = new Slider:
     prefWidth = 350
     showTickLabels = true
