@@ -27,8 +27,8 @@ final class ModelForm(val model: Model) extends VBox:
     text.onChange { (_, _, newValue) => model.doubleProperty.value = newValue.toDouble }
 
   val intSliderLabel = Label("Int Slider:")
-  val intSlider = new NumberSlider(textFieldText = model.int.toString,
-                                   textFieldFormatConverter = NumberSlider.integerFormatConverter):
+  val intSlider = new NumberSlider(numberAsText = model.int.toString,
+                                   numberAsTextFormatConverter = NumberSlider.integerFormatConverter):
                     slider.min = model.intRange.start
                     slider.max = model.intRange.end
                     slider.majorTickUnit = 1
@@ -36,8 +36,8 @@ final class ModelForm(val model: Model) extends VBox:
                     slider.value.onChange { (_, _, newValue) => model.intRangeValueProperty.value = newValue.intValue }
 
   val doubleSliderLabel = Label("Double Slider:")
-  val doubleSlider = new NumberSlider(textFieldText = model.double.toString,
-                                      textFieldFormatConverter = NumberSlider.decimalFormatConverter):
+  val doubleSlider = new NumberSlider(numberAsText = model.double.toString,
+                                      numberAsTextFormatConverter = NumberSlider.decimalFormatConverter):
                     slider.min = model.doubleRange.start.toDouble
                     slider.max = model.doubleRange.end.toDouble
                     slider.minorTickCount = 1
