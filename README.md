@@ -13,13 +13,14 @@ Custom Controls
 * NumberSlider
 * TimeField
 
->Standard controls include:
+Standard Controls
+-----------------
+>These standard controls are *effectivelly* ***self-validating***.
 * CheckBox
 * ChoiceBox
 * CombonBox
 * DatePicker
 * ListView
->These standard controls are effectivelly ***self-validating***.
 
 Notes
 -----
