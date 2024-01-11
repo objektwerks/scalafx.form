@@ -7,7 +7,7 @@ import scalafx.geometry.Insets
 import scalafx.scene.control.{Label, Spinner}
 import scalafx.scene.layout.{HBox, Priority}
 
-class TimeField(localTime: LocalTime) extends HBox:
+final class TimeField(localTime: LocalTime) extends HBox:
   spacing = 3
   padding = Insets(3)
 
