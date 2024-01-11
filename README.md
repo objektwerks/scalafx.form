@@ -36,7 +36,7 @@ Model
 * ModelPane 1 --> 1 ModelForm
 * ModelDialog 1 --> 1 ModelForm
 * MenuBar 1 --> 1 Menu 1 --> * MenuItem ( dialog, exit )
-* Menu 1 -- build --> MenuBar ( objektwerks menu object )
+* Menu 1 -- build --> 1 MenuBar ( custom menu builder )
 * View 1 --> 1 Model, MenuBar, ModelPane
 * App 1 --> 1 Model, View
 
