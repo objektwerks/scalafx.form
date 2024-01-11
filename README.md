@@ -1,10 +1,10 @@
 ScalaFx Form
 ------------
->ScalaFx *custom* form layout and *custom* controls using Scala 3.
+>ScalaFx ***custom*** form layout and controls using Scala 3.
 
 Custom Controls
 ---------------
-> These *custom* controls are *self-validating*.
+> These controls are *self-validating*.
 * DateField
 * DateTimeField
 * DoubleTextField
@@ -15,7 +15,7 @@ Custom Controls
 
 Standard Controls
 -----------------
->These *standard* controls are *effectivelly self-validating*.
+>These controls are *effectivelly self-validating*.
 * CheckBox
 * ChoiceBox
 * CombonBox
