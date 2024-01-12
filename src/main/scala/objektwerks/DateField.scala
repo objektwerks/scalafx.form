@@ -15,15 +15,15 @@ class DateField(localDate: LocalDate) extends HBox:
 
   val yearLabel = new Label:
     prefHeight = 25
-    text = "YYYY:"
+    text = "Year:"
 
   val monthLabel = new Label:
     prefHeight = 25
-    text = "MM:"
+    text = "Month:"
 
   val dayLabel = new Label:
     prefHeight = 25
-    text = "DD:"
+    text = "Day:"
 
   val yearSpinner = Spinner[Int](min = localDate.getYear - 1, max = localDate.getYear, initialValue = localDate.getYear, amountToStepBy = 1)
   yearSpinner.prefWidth = 75
