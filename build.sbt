@@ -1,7 +1,7 @@
 name := "scalafx.form"
 organization := "objektwerks"
 version := "0.21-SNAPSHOT"
-scalaVersion := "3.4.0-RC1"
+scalaVersion := "3.4.0-RC2"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "21.0.0-R32",
