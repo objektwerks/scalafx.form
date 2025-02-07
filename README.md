@@ -52,6 +52,20 @@ Run
 ---
 1. sbt run
 
+ScalaFx Binding
+---------------
+* ScalaFx property binding for case class / properties / controls doesn't appear to work:
+```
+  case class Person(name: String):
+    val nameProperty = ObjectProperty(name)
+    nameProperty.bind( Bindings.createObjectBinding(() => this.name, nameProperty) )
+
+  val labelName = Label( context.labelName )
+  val textFieldName = new TextField():
+    text <==> model.selectedPerson.value.nameProperty
+```
+>Simple ScalaFx property binding does work, though. Currently using manual case class / property binding.
+
 Resources
 ---------
 * [ScalaFx](https://www.scalafx.org/)
