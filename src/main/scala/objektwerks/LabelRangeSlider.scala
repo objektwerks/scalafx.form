@@ -7,7 +7,9 @@ import scalafx.scene.control.Label
 import scalafx.scene.layout.{HBox, Priority, Region}
 import scalafx.scene.text.TextAlignment
 
-import objektwerks.*
+extension (double: Double)
+  def format: Double = f"$double%2.1f".toDouble
+  def formatGravity: Double = f"$double%1.3f".toDouble
 
 enum Format derives CanEqual:
   case asInt, asDouble, asGravity
