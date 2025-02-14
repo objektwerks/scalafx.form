@@ -12,6 +12,9 @@ Custom Controls
 * NonEmptyTextField
 * NumberSlider
 * TimeField
+* ControlGrid
+* LabelButton
+* LabelRangeSlider
 
 Standard Controls
 -----------------
