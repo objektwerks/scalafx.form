@@ -49,8 +49,9 @@ val textPersonName = new NonEmptyTextField():
 ```
 >the ```NonEmptyTextField.text``` property is bidirectionally bound with ```Person.nameProperty```.
 
->Debug in ```ModelForm``` shows changes in both properties being bidirectionally reflected as expected. Yet
->```Person.name``` is never updated with these changes.
+>Debug in ```ModelForm``` shows changes in both properties being bidirectionally reflected as expected.
+
+>Debug in ```Model``` shows ```Person.nameProperty``` changes are never reflected in ```Person.name```.
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
