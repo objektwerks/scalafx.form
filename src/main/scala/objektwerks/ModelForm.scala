@@ -88,6 +88,10 @@ final class ModelForm(val model: Model) extends VBox:
   val labelPersonName = Label("Person Name" )
   val textPersonName = new NonEmptyTextField():
     text <==> model.personProperty.value.nameProperty
+    text.onChange { (_, _, name) =>
+      println(s"*** new person name: $name")
+      println(s"***model person name property: ${model.personProperty.value.nameProperty.value}")
+    }
 
   val fields = List(
     textLabel -> textField,
