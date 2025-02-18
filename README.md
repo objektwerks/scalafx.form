@@ -28,7 +28,7 @@ Standard Controls
 ScalaFx Binding
 ---------------
 >ScalaFx bidirectional binding between a control property and case class property works.
->However, case class property changes are not set for case class fields. For instance,
+>However, case class property changes are not reflected in case class fields. For instance,
 ```
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
