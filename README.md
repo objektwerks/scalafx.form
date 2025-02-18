@@ -61,7 +61,7 @@ final case class Model(person: ObjectProperty[Person])
 ```
 >or will this method in ```Model``` suffice:
 ```
-  def propertiesToModel: Model =
+  def copyProperties: Model =
     Model(
       text = textProperty.value,
       int = intProperty.value,
