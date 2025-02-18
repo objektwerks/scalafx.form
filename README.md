@@ -77,7 +77,7 @@ final case class Model(person: ObjectProperty[Person])
     )
 ```
 >Note this line: ```person = personProperty.value.copy(name = personProperty.value.nameProperty.value)```,
->which yields an updated ```Person```.
+>which yields a correctly updated ```Person``` instance.
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
