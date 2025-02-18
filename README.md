@@ -80,6 +80,14 @@ final case class Model(person: ObjectProperty[Person])
 >Note ***this*** line: ```person = personProperty.value.copy(name = personProperty.value.nameProperty.value)```,
 >which yields a correctly updated ```Person``` instance.
 
+>Or is this a better option:
+```
+final case class Person(name: String):
+  val nameProperty = ObjectProperty[String](this, "name", name)
+
+  def propertyToPerson: Person = Person( nameProperty.value )
+```
+
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
 
