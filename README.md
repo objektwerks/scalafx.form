@@ -29,7 +29,7 @@ ScalaFx Binding
 ---------------
 >ScalaFx property binding for case class / properties / controls doesn't appear to work.
 
->See [Person](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Person.scala) and
+>See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
 
 Notes
