@@ -85,6 +85,10 @@ final class ModelForm(val model: Model) extends VBox:
   val dateTimeField = new DateTimeField(model.datetime)
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
+  val labelPersonName = Label("Person Name" )
+  val textPersonName = new NonEmptyTextField():
+    text <==> model.person.nameProperty
+
   val fields = List(
     textLabel -> textField,
     intLabel -> intTextField,
@@ -98,7 +102,8 @@ final class ModelForm(val model: Model) extends VBox:
     datePickerLabel -> datePicker,
     dateLabel -> dateField,
     timeLabel -> timeField,
-    dateTimeLabel -> dateTimeField
+    dateTimeLabel -> dateTimeField,
+    labelPersonName -> textPersonName
   )
 
   val form = Form(fields)
