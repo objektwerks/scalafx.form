@@ -36,7 +36,7 @@ ScalaFx Binding
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 ```
->with this model:
+>with this UI model ( abbreviated here ):s
 ```
 final case class Model(person: Person):
   val personProperty = ObjectProperty[Person](this, "person", person)
