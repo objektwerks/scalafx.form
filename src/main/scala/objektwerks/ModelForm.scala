@@ -87,7 +87,7 @@ final class ModelForm(val model: Model) extends VBox:
 
   val labelPersonName = Label("Person Name" )
   val textPersonName = new NonEmptyTextField():
-    text <==> model.person.nameProperty
+    text <==> model.personProperty.value.nameProperty
 
   val fields = List(
     textLabel -> textField,
