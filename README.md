@@ -58,6 +58,25 @@ val textPersonName = new NonEmptyTextField():
 final case class Person(name: ObjectProperty[String]):
 final case class Model(person: ObjectProperty[Person])
 ```
+>or can this method in ```Model``` suffice:
+```
+  def propertiesToModel: Model =
+    Model(
+      text = textProperty.value,
+      int = intProperty.value,
+      double = doubleProperty.value,
+      intRangeValue = intRangeValueProperty.value,
+      doubleRangeValue = doubleRangeValueProperty.value,
+      isChecked = isCheckedProperty.value,
+      items = items,
+      item = itemProperty.value,
+      date = dateProperty.value,
+      time = timeProperty.value,
+      datetime = datetimeProperty.value,
+      person = personProperty.value.copy(name = personProperty.value.nameProperty.value)
+    )
+```
+>Note this code: ```person = personProperty.value.copy(name = personProperty.value.nameProperty.value)```
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
