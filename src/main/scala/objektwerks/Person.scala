@@ -4,6 +4,6 @@ package objektwerks
 import scalafx.beans.property.ObjectProperty
 
 final case class Person(name: String):
-  val nameProperty = ObjectProperty(name)
+  val nameProperty = ObjectProperty[String](this, "name", name)
   // throws bound value cannot be set exception
   // nameProperty.bind( Bindings.createObjectBinding(() => this.name, nameProperty) )
