@@ -55,7 +55,7 @@ val textPersonName = new NonEmptyTextField():
 
 >So, is creating case classes with ScalaFx properties the only solution? For instance:
 ```
-final case class Person(name: ObjectProperty[String]):
+final case class Person(name: ObjectProperty[String])
 final case class Model(person: ObjectProperty[Person])
 ```
 >or will this method in ```Model``` suffice:
