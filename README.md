@@ -62,6 +62,14 @@ Run
 ---
 1. sbt run
 
+Assembly
+--------
+1. sbt clean test assembly copyAssemblyJar
+
+Execute
+-------
+1. java -jar .assembly/scalafx-speech-$version.jar ( or double-click executable jar )
+
 Resources
 ---------
 * [ScalaFx](https://www.scalafx.org/)
