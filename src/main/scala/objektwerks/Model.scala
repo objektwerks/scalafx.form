@@ -49,5 +49,5 @@ final case class Model(text: String = "nonempty",
       date = dateProperty.value,
       time = timeProperty.value,
       datetime = datetimeProperty.value,
-      person = personProperty.value
+      person = personProperty.value.copy(name = personProperty.value.nameProperty.value)
     )
