@@ -58,7 +58,7 @@ val textPersonName = new NonEmptyTextField():
 final case class Person(name: ObjectProperty[String]):
 final case class Model(person: ObjectProperty[Person])
 ```
->or can this method in ```Model``` suffice:
+>or will this method in ```Model``` suffice:
 ```
   def propertiesToModel: Model =
     Model(
