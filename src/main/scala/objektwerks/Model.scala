@@ -7,6 +7,8 @@ import scalafx.beans.property.ObjectProperty
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 
+  def propertyToPerson: Person = Person( nameProperty.value )
+
 final case class Model(text: String = "nonempty",
                        int: Int = 5,
                        double: Double = 5.5,
