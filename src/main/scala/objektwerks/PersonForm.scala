@@ -9,7 +9,6 @@ final case class Person(name: String):
   val nameProperty = ObjectProperty(name)
   nameProperty.bind( Bindings.createObjectBinding(() => this.name, nameProperty) )
 
-
 final class PersonForm(person: Person) extends VBox:
   val personProperty = ObjectProperty(person)
 
