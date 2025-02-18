@@ -59,13 +59,22 @@ ScalaFx Binding
 ---------------
 * ScalaFx property binding for case class / properties / controls doesn't appear to work:
 ```
-  case class Person(name: String):
-    val nameProperty = ObjectProperty(name)
-    nameProperty.bind( Bindings.createObjectBinding(() => this.name, nameProperty) )
+import scalafx.beans.binding.Bindings
+import scalafx.beans.property.ObjectProperty
+import scalafx.scene.control.{Label, TextField}
+import scalafx.scene.layout.VBox
 
-  val labelName = Label( context.labelName )
+final case class Person(name: String):
+  val nameProperty = ObjectProperty(name)
+  nameProperty.bind( Bindings.createObjectBinding(() => this.name, nameProperty) )
+
+final class PersonForm(person: Person) extends VBox:
+  val personProperty = ObjectProperty(person)
+
+  val labelName = Label("Name" )
+
   val textFieldName = new TextField():
-    text <==> model.selectedPerson.value.nameProperty
+    text <==> personProperty.value.nameProperty
 ```
 >Simple ScalaFx property binding does work, though. Currently using manual case class / property binding.
 
