@@ -39,7 +39,9 @@ val labelPersonName = Label("Person Name:" )
 val textPersonName = new NonEmptyTextField():
   text <==> model.personProperty.value.nameProperty
 ```
-
+>the ```NonEmptyTextField.text``` string property is bidirectional bound to ```Person.nameProperty```.
+>Debug in ModelForm shows changes in both properties being bidirectional reflected as expected. Yet
+>```Person.name``` is never updated with changes to ```Person.nameProperty``` via ```NonEmptyTextField.text```.
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
