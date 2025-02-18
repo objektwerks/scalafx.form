@@ -36,7 +36,12 @@ ScalaFx Binding
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 ```
->with is this bidirectional binding:
+>with this model:
+```
+final case class Model(person: Person):
+  val personProperty = ObjectProperty[Person](this, "person", person)
+```
+>and this bidirectional binding:
 ```
 val labelPersonName = Label("Person Name:" )
 val textPersonName = new NonEmptyTextField():
