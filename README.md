@@ -29,7 +29,7 @@ ScalaFx Binding
 ---------------
 >A ScalaFx bidirectional binding between a control property and case class property works as expected.
 
->However, case class property changes are not reflected in case class fields.
+>However, case class property changes are not reflected in case class associated field.
 
 >For instance, this case class:
 ```
