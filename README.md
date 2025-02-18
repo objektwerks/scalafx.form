@@ -87,7 +87,8 @@ final case class Person(name: String):
 
   def fromProperties: Person = Person( nameProperty.value )
 ```
->which would change the above line to: ```person = personProperty.value.copyProperties```
+>which would change the above line to: ```person = personProperty.value.copyProperties``` Both approaches
+>circumvent the case class not-being-update issue --- while allowing case classes to be used naturally.
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
