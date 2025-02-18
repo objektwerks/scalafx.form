@@ -58,6 +58,7 @@ val textPersonName = new NonEmptyTextField():
 final case class Person(name: ObjectProperty[String]):
 final case class Model(person: ObjectProperty[Person])
 ```
+>I've yet to test this idea.
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
