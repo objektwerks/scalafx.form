@@ -53,7 +53,7 @@ val textPersonName = new NonEmptyTextField():
 
 >Debug in ```Model``` shows ```Person.nameProperty``` changes are never reflected in ```Person.name```.
 
->So, is creating case classes with ScalaFx properties the only solution? To wit:
+>So, is creating case classes with ScalaFx properties the only solution? For instance:
 ```
 final case class Person(name: ObjectProperty[String]):
 final case class Model(person: ObjectProperty[Person])
