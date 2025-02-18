@@ -29,7 +29,6 @@ final case class Model(text: String = "nonempty",
   val dateProperty = ObjectProperty[LocalDate](this, "date", date)
   val timeProperty = ObjectProperty[LocalTime](this, "time", time)
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
-  val personProperty = ObjectProperty[Person](this, "person", person)
 
   def propertiesToModel: Model =
     Model(
@@ -44,5 +43,5 @@ final case class Model(text: String = "nonempty",
       date = dateProperty.value,
       time = timeProperty.value,
       datetime = datetimeProperty.value,
-      person = personProperty.value
+      person = person
     )
