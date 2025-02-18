@@ -61,7 +61,7 @@ final case class Model(person: ObjectProperty[Person])
 ```
 >or will this method in ```Model``` suffice:
 ```
-  def copyProperties: Model =
+  def fromProperties: Model =
     Model(
       text = textProperty.value,
       int = intProperty.value,
@@ -85,7 +85,7 @@ final case class Model(person: ObjectProperty[Person])
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 
-  def copyProperties: Person = Person( nameProperty.value )
+  def fromProperties: Person = Person( nameProperty.value )
 ```
 >which would change the above line to: ```person = personProperty.value.copyProperties```
 

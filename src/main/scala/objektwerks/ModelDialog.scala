@@ -20,5 +20,5 @@ final class ModelDialog(form: ModelForm) extends Dialog[Model]:
   dialogPane().buttonTypes = List(submitButtonType, ButtonType.Cancel)
 
   resultConverter = dialogButton =>
-    if dialogButton == submitButtonType then form.model.copyProperties
+    if dialogButton == submitButtonType then form.model.fromProperties
     else null

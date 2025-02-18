@@ -7,7 +7,7 @@ import scalafx.beans.property.ObjectProperty
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 
-  def copyProperties: Person = Person( nameProperty.value )
+  def fromProperties: Person = Person( nameProperty.value )
 
 final case class Model(text: String = "nonempty",
                        int: Int = 5,
@@ -35,7 +35,7 @@ final case class Model(text: String = "nonempty",
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
   val personProperty = ObjectProperty[Person](this, "person", person)
 
-  def copyProperties: Model =
+  def fromProperties: Model =
     println(s"*** [propertiesToModel] person property: ${personProperty.value}")
     println(s"*** [propertiesToModel] person property name: ${personProperty.value.name}")
     println(s"*** [propertiesToModel] person property name property: ${personProperty.value.nameProperty.value}")
@@ -51,5 +51,5 @@ final case class Model(text: String = "nonempty",
       date = dateProperty.value,
       time = timeProperty.value,
       datetime = datetimeProperty.value,
-      person = personProperty.value.copyProperties
+      person = personProperty.value.fromProperties
     )
