@@ -25,6 +25,12 @@ Standard Controls
 * DatePicker
 * ListView
 
+ScalaFx Binding
+---------------
+>ScalaFx property binding for case class / properties / controls doesn't appear to work.
+
+>See [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
+
 Notes
 -----
 1. Using a ```SelectionModel``` can return a ***null*** value! Consider using a ```ChangeListener```. See ```ModelForm``` for examples.
@@ -54,12 +60,6 @@ Build
 Run
 ---
 1. sbt run
-
-ScalaFx Binding
----------------
->ScalaFx property binding for case class / properties / controls doesn't appear to work.
-
->See [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
 
 Resources
 ---------
