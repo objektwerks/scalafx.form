@@ -85,7 +85,7 @@ final case class Model(person: ObjectProperty[Person])
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 
-  def propertyToPerson: Person = Person( nameProperty.value )
+  def copyProperties: Person = Person( nameProperty.value )
 ```
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
