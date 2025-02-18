@@ -87,7 +87,7 @@ final case class Person(name: String):
 
   def fromProperties: Person = Person( nameProperty.value )
 ```
->which would change the above line to: ```person = personProperty.value.copyProperties```
+>which would change the above ```Model``` line to: ```person = personProperty.value.copyProperties```
 
 >Both approaches circumvent the case class field ***not-being-updated*** issue --- while allowing case classes to be used naturally.
 
