@@ -27,8 +27,11 @@ Standard Controls
 
 ScalaFx Binding
 ---------------
->ScalaFx bidirectional binding between a control property and case class property works.
->However, case class property changes are not reflected in case class fields. For instance,
+>A ScalaFx bidirectional binding between a control property and case class property works as expected.
+
+>However, case class property changes are not reflected in case class fields.
+
+>For instance,
 ```
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
@@ -39,7 +42,7 @@ val labelPersonName = Label("Person Name:" )
 val textPersonName = new NonEmptyTextField():
   text <==> model.personProperty.value.nameProperty
 ```
->the ```NonEmptyTextField.text``` string property is bidirectional bound to ```Person.nameProperty```.
+>the ```NonEmptyTextField.text``` property is bidirectionally bound to ```Person.nameProperty```.
 >Debug in ModelForm shows changes in both properties being bidirectional reflected as expected. Yet
 >```Person.name``` is never updated with changes to ```Person.nameProperty``` via ```NonEmptyTextField.text```.
 
