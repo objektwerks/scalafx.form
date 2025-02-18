@@ -47,7 +47,8 @@ val labelPersonName = Label("Person Name:" )
 val textPersonName = new NonEmptyTextField():
   text <==> model.personProperty.value.nameProperty
 ```
->Note the ```NonEmptyTextField.text``` property is bidirectionally bound with ```Person.nameProperty```.
+>Note how the ```NonEmptyTextField.text``` property is bidirectionally bound with ```Person.nameProperty```
+>via this symbol ```<==>```.
 
 >Debug in ```ModelForm``` shows changes in *both* properties being reflected as expected.
 
