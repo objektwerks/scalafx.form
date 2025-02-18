@@ -53,6 +53,12 @@ val textPersonName = new NonEmptyTextField():
 
 >Debug in ```Model``` shows ```Person.nameProperty``` changes are never reflected in ```Person.name```.
 
+>Is the only solution creating case classes with ScalaFx properties? To wit:
+```
+final case class Person(name: ObjectProperty[String]):
+final case class Model(person: ObjectProperty[Person])
+```
+
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
 
