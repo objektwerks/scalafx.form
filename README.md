@@ -33,7 +33,13 @@ ScalaFx Binding
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 ```
->
+>with is this binding:
+```
+val labelPersonName = Label("Person Name:" )
+val textPersonName = new NonEmptyTextField():
+  text <==> model.personProperty.value.nameProperty
+```
+
 
 >See [Model](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/Model.scala) and
 [ModelForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/ModelForm.scala)
