@@ -35,7 +35,7 @@ final case class Model(text: String = "nonempty",
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
   val personProperty = ObjectProperty[Person](this, "person", person)
 
-  def propertiesToModel: Model =
+  def copyProperties: Model =
     println(s"*** [propertiesToModel] person property: ${personProperty.value}")
     println(s"*** [propertiesToModel] person property name: ${personProperty.value.name}")
     println(s"*** [propertiesToModel] person property name property: ${personProperty.value.nameProperty.value}")

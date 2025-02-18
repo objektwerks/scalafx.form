@@ -7,7 +7,7 @@ object Menu:
     val dialogMenuItem = new MenuItem("Dialog"):
       onAction = { _ =>
         ModelDialog( ModelForm(model) ).showAndWait() match
-          case Some(edited: Model) => println(s"*** Model Dialog: ${edited.propertiesToModel}")
+          case Some(edited: Model) => println(s"*** Model Dialog: ${edited.copyProperties}")
           case _ =>
       }
 
