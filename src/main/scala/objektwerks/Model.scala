@@ -17,7 +17,8 @@ final case class Model(text: String = "nonempty",
                        item: String = "abc",
                        date: LocalDate = LocalDate.now,
                        time: LocalTime = LocalTime.now,
-                       datetime: LocalDateTime = LocalDateTime.now):
+                       datetime: LocalDateTime = LocalDateTime.now,
+                       person: Person = Person("Fred Flintstone")):
   val textProperty = ObjectProperty[String](this, "text", text)
   val intProperty = ObjectProperty[Int](this, "int", int)
   val doubleProperty = ObjectProperty[Double](this, "double", double)
@@ -28,6 +29,7 @@ final case class Model(text: String = "nonempty",
   val dateProperty = ObjectProperty[LocalDate](this, "date", date)
   val timeProperty = ObjectProperty[LocalTime](this, "time", time)
   val datetimeProperty = ObjectProperty[LocalDateTime](this, "datetime", datetime)
+  val personProperty = ObjectProperty[Person](this, "person", person)
 
   def propertiesToModel: Model =
     Model(
@@ -41,5 +43,6 @@ final case class Model(text: String = "nonempty",
       item = itemProperty.value,
       date = dateProperty.value,
       time = timeProperty.value,
-      datetime = datetimeProperty.value
+      datetime = datetimeProperty.value,
+      person = personProperty.value
     )
