@@ -49,7 +49,7 @@ val textPersonName = new NonEmptyTextField():
 ```
 >the ```NonEmptyTextField.text``` property is bidirectionally bound with ```Person.nameProperty```.
 
->Debug in ```ModelForm``` shows changes in both properties being bidirectionally reflected as expected.
+>Debug in ```ModelForm``` shows changes in *both* properties being reflected as expected.
 
 >Debug in ```Model``` shows ```Person.nameProperty``` changes are never reflected in ```Person.name```.
 
