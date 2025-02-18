@@ -69,6 +69,8 @@ ScalaFx Binding
 ```
 >Simple ScalaFx property binding does work, though. Currently using manual case class / property binding.
 
+>See [PersonForm](https://github.com/objektwerks/scalafx.form/blob/main/src/main/scala/objektwerks/PersonForm.scala)
+
 Resources
 ---------
 * [ScalaFx](https://www.scalafx.org/)
