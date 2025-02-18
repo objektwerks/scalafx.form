@@ -31,12 +31,12 @@ ScalaFx Binding
 
 >However, case class property changes are not reflected in case class fields.
 
->For instance,
+>For instance, this case class:
 ```
 final case class Person(name: String):
   val nameProperty = ObjectProperty[String](this, "name", name)
 ```
->with is this binding:
+>with is this bidirectional binding:
 ```
 val labelPersonName = Label("Person Name:" )
 val textPersonName = new NonEmptyTextField():
