@@ -1,9 +1,11 @@
 package objektwerks
 
-import java.time.{LocalDateTime, LocalTime}
+import java.time.{LocalDate, LocalDateTime, LocalTime}
 
 import scalafx.beans.property.ObjectProperty
-import java.time.LocalDate
+
+final case class Person(name: String):
+  val nameProperty = ObjectProperty[String](this, "name", name)
 
 final case class Model(text: String = "nonempty",
                        int: Int = 5,
