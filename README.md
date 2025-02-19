@@ -64,7 +64,7 @@ val textPersonName = new NonEmptyTextField():
 final case class Person(name: ObjectProperty[String])
 final case class Model(person: ObjectProperty[Person])
 ```
->or will this method in ```Model``` suffice:
+>or will this method suffice:
 ```
   def fromProperties: Model =
     Model(
