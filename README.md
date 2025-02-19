@@ -71,8 +71,8 @@ final case class Model(person: ObjectProperty[Person])
       person = personProperty.value.copy(name = personProperty.value.nameProperty.value)
     )
 ```
->Note ***this*** line: ```person = personProperty.value.copy(name = personProperty.value.nameProperty.value)```,
->which yields a correctly updated ```Person``` instance.
+>Note ```person = personProperty.value.copy(name = personProperty.value.nameProperty.value)```, yields a
+>correctly updated ```Person``` instance.
 
 >Or is this a better option:
 ```
