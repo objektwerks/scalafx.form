@@ -86,10 +86,10 @@ final class ModelForm(val model: Model) extends VBox:
   dateTimeField.value.onChange { (_, _, newValue) => model.datetimeProperty.value = newValue }
 
   val labelPersonName = Label("Person Name:" )
-  val textPersonName = new NonEmptyTextField():
+  val textFieldPersonName = new NonEmptyTextField():
     text <==> model.personProperty.value.nameProperty
     text.onChange { (_, _, name) =>
-      println(s"*** [on change] textPersonName.text new name: $name")
+      println(s"*** [on change] textFieldPersonName.text new name: $name")
       println(s"*** [on change] model.personProperty.value.nameProperty.value: ${model.personProperty.value.nameProperty.value}")
     }
 
@@ -107,7 +107,7 @@ final class ModelForm(val model: Model) extends VBox:
     dateLabel -> dateField,
     timeLabel -> timeField,
     dateTimeLabel -> dateTimeField,
-    labelPersonName -> textPersonName
+    labelPersonName -> textFieldPersonName
   )
 
   val form = Form(fields)
