@@ -36,9 +36,9 @@ final case class Model(text: String = "nonempty",
   val personProperty = ObjectProperty[Person](this, "person", person)
 
   def fromProperties: Model =
-    println(s"*** [propertiesToModel] person property: ${personProperty.value}")
-    println(s"*** [propertiesToModel] person property name: ${personProperty.value.name}")
-    println(s"*** [propertiesToModel] person property name property: ${personProperty.value.nameProperty.value}")
+    println(s"*** [fromProperties] personProperty.value: ${personProperty.value}")
+    println(s"*** [fromProperties] personProperty.value.name: ${personProperty.value.name}")
+    println(s"*** [fromProperties] personProperty.value.nameProperty.value: ${personProperty.value.nameProperty.value}")
     Model(
       text = textProperty.value,
       int = intProperty.value,
