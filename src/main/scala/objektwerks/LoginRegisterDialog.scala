@@ -8,9 +8,9 @@ import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
-final case class Login(emailAddress: String, pin: String)
+final case class Login(emailAddress: String, password: String)
 final case class Register(emailAddress: String)
-final case class LoginRegister(login: Option[Login], register: Option[Register])
+final case class LoginRegister(login: Option[Login] = None, register: Option[Register] = None)
 
 final class LoginRegisterDialog(stage: Stage,
                                 title: String,
@@ -73,3 +73,23 @@ final class LoginRegisterDialog(stage: Stage,
   registerEmailAddressTextField.text.onChange { (_, _, newValue) =>
     registerButton.disable = newValue.nonEmpty
   }
+
+  resultConverter = dialogButton =>
+    if dialogButton == loginButtonType then
+      LoginRegister(
+        login = Some(
+          Login(
+            loginEmailAddressTextField.text.value,
+            loginPasswordTextField.text.value
+          )
+        )
+      )
+    else if dialogButton == registerButtonType then
+      LoginRegister(
+        register = Some(
+          Register(
+            registerEmailAddressTextField.text.value
+          )
+        )
+      )
+    else null
