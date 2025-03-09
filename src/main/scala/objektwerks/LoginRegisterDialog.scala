@@ -6,6 +6,9 @@ import scalafx.scene.control.Dialog
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
+final case class Register(emailAddress: String)
+final case class Login(emailAddress: String, pin: String)
+
 class LoginRegisterDialog(stage: Stage,
                           title: String,
                           headerText: String,
