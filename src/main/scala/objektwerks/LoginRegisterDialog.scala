@@ -15,7 +15,7 @@ final case class LoginRegister(login: Option[Login] = None, register: Option[Reg
 final class LoginRegisterDialog(stage: Stage,
                                 title: String,
                                 headerText: String,
-                                graphic: ImageView) extends Dialog:
+                                graphic: ImageView) extends Dialog[LoginRegister]:
   initOwner(stage)
   title = title
   headerText = headerText
