@@ -5,21 +5,15 @@ import java.awt.Toolkit
 import scalafx.Includes.*
 import scalafx.scene.control.{ButtonType, Dialog, Label, TextField, Tab, TabPane}
 import scalafx.scene.control.ButtonBar.ButtonData
-import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
 final case class Login(emailAddress: String, password: String)
 final case class Register(emailAddress: String)
 final case class LoginRegister(login: Option[Login] = None, register: Option[Register] = None)
 
-final class LoginRegisterDialog(stage: Stage,
-                                title: String,
-                                headerText: String,
-                                graphic: ImageView) extends Dialog[LoginRegister]:
+final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[LoginRegister]:
   initOwner(stage)
   title = title
-  headerText = headerText
-  graphic = graphic
   x = Toolkit.getDefaultToolkit.getScreenSize.width / 2.4
   y = Toolkit.getDefaultToolkit.getScreenSize.height / 6
 
