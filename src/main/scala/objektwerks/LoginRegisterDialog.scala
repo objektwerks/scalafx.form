@@ -61,3 +61,7 @@ final class LoginRegisterDialog(stage: Stage,
 
   val registerButton = dialogPane().lookupButton(registerButtonType)
   registerButton.disable = true
+
+  registerEmailAddressTextField.text.onChange { (_, _, newValue) =>
+    registerButton.disable = newValue.nonEmpty
+  }
