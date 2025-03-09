@@ -30,6 +30,10 @@ Control Issues
 1. Using a ```SelectionModel``` can return a ***null*** value! Consider using a ```ChangeListener```. See ```ModelForm``` for examples.
 2. ```ToggleButton``` and ```RadioButton```, when wrapped in a ```ToggleGroup```, can't be added to a ```Form``` - not being a ```Node``` or subclass of ```Node```.
 
+Dialogs
+-------
+* LoginRegisterDialog
+
 ScalaFx Binding
 ---------------
 >A ScalaFx bidirectional binding between a control property and case class property works as expected.
