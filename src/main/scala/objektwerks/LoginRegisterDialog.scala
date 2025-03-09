@@ -7,6 +7,8 @@ import scalafx.scene.control.{ButtonType, Dialog, Label, TextField, Tab, TabPane
 import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.stage.Stage
 
+import Validator.*
+
 final case class Login(emailAddress: String, Pin: String)
 final case class Register(emailAddress: String)
 final case class LoginRegister(login: Option[Login] = None, register: Option[Register] = None)
@@ -57,11 +59,11 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   registerButton.disable = true
 
   loginEmailAddressTextField.text.onChange { (_, _, newValue) =>
-    loginButton.disable = !newValue.nonEmpty && !loginPinTextField.text.value.nonEmpty
+    loginButton.disable = !newValue.isEmailAddress && !loginPinTextField.text.value.isPin
   }
 
   loginPinTextField.text.onChange { (_, _, newValue) =>
-    loginButton.disable = !newValue.nonEmpty && !loginEmailAddressTextField.text.value.nonEmpty
+    loginButton.disable = !newValue.isPin && !loginEmailAddressTextField.text.value.isEmailAddress
   }
 
   registerEmailAddressTextField.text.onChange { (_, _, newValue) =>
