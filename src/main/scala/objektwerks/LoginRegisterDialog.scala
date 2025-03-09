@@ -39,3 +39,8 @@ final class LoginRegisterDialog(stage: Stage,
     text = "Login"
     closable = false
     content = loginCongrolGrid
+
+  val registerTab = new Tab:
+    text = "Register"
+    closable = false
+    content = registerCongrolGrid
