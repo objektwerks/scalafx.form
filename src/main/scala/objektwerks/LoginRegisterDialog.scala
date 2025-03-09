@@ -1,3 +1,5 @@
 package objektwerks
 
-class LoginRegisterDialog
+import scalafx.scene.control.Dialog
+
+class LoginRegisterDialog extends Dialog
