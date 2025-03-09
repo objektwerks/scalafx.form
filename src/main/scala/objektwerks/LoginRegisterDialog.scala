@@ -2,6 +2,7 @@ package objektwerks
 
 import java.awt.Toolkit
 
+import scalafx.Includes.*
 import scalafx.scene.control.{Dialog, Label, TextField, Tab, TabPane}
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
@@ -47,3 +48,5 @@ final class LoginRegisterDialog(stage: Stage,
 
   val tabPane = new TabPane:
     tabs = List(loginTab, registerTab)
+
+  dialogPane().content = tabPane
