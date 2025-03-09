@@ -59,11 +59,11 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   registerButton.disable = true
 
   loginEmailAddressTextField.text.onChange { (_, _, newValue) =>
-    loginButton.disable = !newValue.isEmailAddress && !loginPinTextField.text.value.isPin
+    loginButton.disable = !newValue.isEmailAddress || !loginPinTextField.text.value.isPin
   }
 
   loginPinTextField.text.onChange { (_, _, newValue) =>
-    loginButton.disable = !newValue.isPin && !loginEmailAddressTextField.text.value.isEmailAddress
+    loginButton.disable = !newValue.isPin || !loginEmailAddressTextField.text.value.isEmailAddress
   }
 
   registerEmailAddressTextField.text.onChange { (_, _, newValue) =>
