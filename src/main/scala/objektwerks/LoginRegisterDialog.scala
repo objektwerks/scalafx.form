@@ -28,3 +28,9 @@ final class LoginRegisterDialog(stage: Stage,
     Label("Password:") -> loginPasswordTextField
   )
   val loginCongrolGrid = ControlGrid(loginControls)
+
+  val registerEmailAddressTextField = TextField()
+  val registerControls = List(
+    Label("Email Address:") -> registerEmailAddressTextField
+  )
+  val registerCongrolGrid = ControlGrid(registerControls)
