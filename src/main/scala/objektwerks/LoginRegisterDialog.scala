@@ -3,7 +3,8 @@ package objektwerks
 import java.awt.Toolkit
 
 import scalafx.Includes.*
-import scalafx.scene.control.{Dialog, Label, TextField, Tab, TabPane}
+import scalafx.scene.control.{ButtonType, Dialog, Label, TextField, Tab, TabPane}
+import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
@@ -50,3 +51,7 @@ final class LoginRegisterDialog(stage: Stage,
     tabs = List(loginTab, registerTab)
 
   dialogPane().content = tabPane
+
+  val loginButtonType = new ButtonType("Login", ButtonData.Left)
+  val registerButtonType = new ButtonType("Register", ButtonData.Right)
+  dialogPane().buttonTypes = List(registerButtonType, loginButtonType)
