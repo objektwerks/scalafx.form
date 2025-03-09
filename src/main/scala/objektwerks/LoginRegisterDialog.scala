@@ -2,7 +2,7 @@ package objektwerks
 
 import java.awt.Toolkit
 
-import scalafx.scene.control.Dialog
+import scalafx.scene.control.{Dialog, Label, TextField}
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
@@ -20,3 +20,11 @@ final class LoginRegisterDialog(stage: Stage,
   graphic = graphic
   x = Toolkit.getDefaultToolkit.getScreenSize.width / 2.4
   y = Toolkit.getDefaultToolkit.getScreenSize.height / 6
+
+  val loginEmailAddressTextField = TextField()
+  val loginPasswordTextField = TextField()
+  val loginControls = List(
+    Label("Email Address:") -> loginEmailAddressTextField,
+    Label("Password:") -> loginPasswordTextField
+  )
+  val loginCongrolGrid = ControlGrid(loginControls)
