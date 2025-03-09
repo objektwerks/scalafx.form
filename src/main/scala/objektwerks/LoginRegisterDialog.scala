@@ -55,3 +55,9 @@ final class LoginRegisterDialog(stage: Stage,
   val loginButtonType = new ButtonType("Login", ButtonData.Left)
   val registerButtonType = new ButtonType("Register", ButtonData.Right)
   dialogPane().buttonTypes = List(registerButtonType, loginButtonType)
+
+  val loginButton = dialogPane().lookupButton(loginButtonType)
+  loginButton.disable = true
+
+  val registerButton = dialogPane().lookupButton(registerButtonType)
+  registerButton.disable = true
