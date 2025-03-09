@@ -7,7 +7,7 @@ import scalafx.scene.control.{ButtonType, Dialog, Label, TextField, Tab, TabPane
 import scalafx.scene.control.ButtonBar.ButtonData
 import scalafx.stage.Stage
 
-final case class Login(emailAddress: String, password: String)
+final case class Login(emailAddress: String, Pin: String)
 final case class Register(emailAddress: String)
 final case class LoginRegister(login: Option[Login] = None, register: Option[Register] = None)
 
@@ -18,10 +18,10 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   y = Toolkit.getDefaultToolkit.getScreenSize.height / 6
 
   val loginEmailAddressTextField = TextField()
-  val loginPasswordTextField = TextField()
+  val loginPinTextField = TextField()
   val loginControls = List(
     Label("Email Address:") -> loginEmailAddressTextField,
-    Label("Password:") -> loginPasswordTextField
+    Label("Pin:") -> loginPinTextField
   )
   val loginCongrolGrid = ControlGrid(loginControls)
 
@@ -57,10 +57,10 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   registerButton.disable = true
 
   loginEmailAddressTextField.text.onChange { (_, _, newValue) =>
-    loginButton.disable = !newValue.nonEmpty && !loginPasswordTextField.text.value.nonEmpty
+    loginButton.disable = !newValue.nonEmpty && !loginPinTextField.text.value.nonEmpty
   }
 
-  loginPasswordTextField.text.onChange { (_, _, newValue) =>
+  loginPinTextField.text.onChange { (_, _, newValue) =>
     loginButton.disable = !newValue.nonEmpty && !loginEmailAddressTextField.text.value.nonEmpty
   }
 
@@ -74,7 +74,7 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
         login = Some(
           Login(
             loginEmailAddressTextField.text.value,
-            loginPasswordTextField.text.value
+            loginPinTextField.text.value
           )
         )
       )
