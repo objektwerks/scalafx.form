@@ -2,7 +2,7 @@ package objektwerks
 
 import java.awt.Toolkit
 
-import scalafx.scene.control.{Dialog, Label, TextField}
+import scalafx.scene.control.{Dialog, Label, TextField, Tab}
 import scalafx.scene.image.ImageView
 import scalafx.stage.Stage
 
@@ -34,3 +34,8 @@ final class LoginRegisterDialog(stage: Stage,
     Label("Email Address:") -> registerEmailAddressTextField
   )
   val registerCongrolGrid = ControlGrid(registerControls)
+
+  val loginTab = new Tab:
+    text = "Login"
+    closable = false
+    content = loginCongrolGrid
