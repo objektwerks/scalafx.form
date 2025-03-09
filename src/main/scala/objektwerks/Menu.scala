@@ -7,8 +7,7 @@ object Menu:
     val loginRegisterMenuItem = new MenuItem("Login ~ Register"):
       onAction = { _ =>
         LoginRegisterDialog( App.stage, "Login ~ Register" ).showAndWait() match
-          case Some(login: Login) => println(s"*** Login: $login")
-          case Some(register: Register) => println(s"*** Register: $register")
+          case Some(loginRegister: LoginRegister) => println(s"*** Login ~ Register: $loginRegister")
           case _ =>
       }
 
