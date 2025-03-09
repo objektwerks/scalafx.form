@@ -4,6 +4,14 @@ import scalafx.scene.control.{Menu, MenuBar, MenuItem, SeparatorMenuItem}
 
 object Menu:
   def build(model: Model): MenuBar =
+    val loginRegisterMenuItem = new MenuItem("Login ~ Register"):
+      onAction = { _ =>
+        LoginRegisterDialog( App.stage, "Login ~ Register", "Login ~ Register", null ).showAndWait() match
+          case Some(login: Login) => println(s"*** Login: $login")
+          case Some(register: Register) => println(s"*** Register: $register")
+          case _ =>
+      }
+
     val dialogMenuItem = new MenuItem("Dialog"):
       onAction = { _ =>
         ModelDialog( ModelForm(model) ).showAndWait() match
@@ -15,7 +23,7 @@ object Menu:
       onAction = { _ => System.exit(0) }
 
     val menu = new Menu("Menu"):
-      items = List(dialogMenuItem, SeparatorMenuItem(), exitMenuItem)
+      items = List(loginRegisterMenuItem, dialogMenuItem, SeparatorMenuItem(), exitMenuItem)
 
     new MenuBar():
       menus = List(menu)
