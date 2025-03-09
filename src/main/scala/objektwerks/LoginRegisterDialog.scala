@@ -67,7 +67,7 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   }
 
   registerEmailAddressTextField.text.onChange { (_, _, newValue) =>
-    registerButton.disable = !newValue.nonEmpty
+    registerButton.disable = !newValue.isEmailAddress
   }
 
   resultConverter = dialogButton =>
