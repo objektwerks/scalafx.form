@@ -1,7 +1,5 @@
 package objektwerks
 
-import java.awt.Toolkit
-
 import scalafx.Includes.*
 import scalafx.scene.control.{ButtonType, Dialog, Label, TextField, Tab, TabPane}
 import scalafx.scene.control.ButtonBar.ButtonData
@@ -16,8 +14,6 @@ final case class LoginRegister(login: Option[Login] = None, register: Option[Reg
 final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[LoginRegister]:
   initOwner(stage)
   title = title
-  x = Toolkit.getDefaultToolkit.getScreenSize.width / 2.4
-  y = Toolkit.getDefaultToolkit.getScreenSize.height / 6
 
   val loginEmailAddressTextField = TextField()
   val loginPinTextField = TextField()
