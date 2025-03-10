@@ -69,19 +69,12 @@ final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[Logi
   resultConverter = dialogButton =>
     if dialogButton == loginButtonType then
       LoginRegister(
-        login = Some(
-          Login(
-            loginEmailAddressTextField.text.value,
-            loginPinTextField.text.value
-          )
-        )
+        login = Some( Login( loginEmailAddressTextField.text.value, loginPinTextField.text.value ) ),
+        register = None
       )
     else if dialogButton == registerButtonType then
       LoginRegister(
-        register = Some(
-          Register(
-            registerEmailAddressTextField.text.value
-          )
-        )
+        login = None,
+        register = Some( Register( registerEmailAddressTextField.text.value ) )
       )
     else null
