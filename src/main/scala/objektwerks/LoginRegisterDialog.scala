@@ -9,7 +9,7 @@ import Validator.*
 
 final case class Login(emailAddress: String, Pin: String)
 final case class Register(emailAddress: String)
-final case class LoginRegister(login: Option[Login] = None, register: Option[Register] = None)
+final case class LoginRegister(login: Option[Login], register: Option[Register])
 
 final class LoginRegisterDialog(stage: Stage, title: String) extends Dialog[LoginRegister]:
   initOwner(stage)
