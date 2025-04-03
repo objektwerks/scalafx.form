@@ -11,6 +11,7 @@ libraryDependencies ++= {
 }
 scalacOptions ++= Seq(
   "-Wunused:all"
+  // For 3.7.0-RC1 warnings: "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
 )
 outputStrategy := Some(StdoutOutput)
 parallelExecution := false
