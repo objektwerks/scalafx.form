@@ -1,7 +1,7 @@
 name := "scalafx.form"
 organization := "objektwerks"
 version := "0.30-SNAPSHOT"
-scalaVersion := "3.7.0-RC2" // 3.7.0-RC1 breaks ScalaFx!
+scalaVersion := "3.6.4" // 3.7.0-RC1/2 still breaks ScalaFx!
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "23.0.1-R34",
