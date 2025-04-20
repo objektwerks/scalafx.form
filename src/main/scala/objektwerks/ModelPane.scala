@@ -15,7 +15,7 @@ final class ModelPane(form: ModelForm) extends VBox:
     alignment = Pos.CENTER
     text = "Submit"
     disable = false
-    onAction = using { _ => println(s"*** Model Pane: ${form.model.fromProperties}") }
+    onAction = { _ => println(s"*** Model Pane: ${form.model.fromProperties}") }
  
   children = List(
     title,
