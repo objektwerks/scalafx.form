@@ -27,7 +27,7 @@ class DateTimeField(localDateTime: LocalDateTime) extends HBox:
   private val localDateTimeButton = new Button:
     text = "..."
     disable = false
-    onAction = { _ => showPopup() }
+    onAction = using { _ => showPopup() }
 
   children = List(localDateTimeLabel, localDateTimeButton)
   HBox.setHgrow(this, Priority.Always)
@@ -70,7 +70,7 @@ private final class PopupView(localDateTime: LocalDateTime,
     alignment = Pos.CENTER
     text = "Close"
     disable = false
-    onAction = { _ =>
+    onAction = using { _ =>
       popup.hide()
       popupValue( onValueChange() )
     }
