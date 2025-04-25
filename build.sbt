@@ -1,7 +1,7 @@
 name := "scalafx.form"
 organization := "objektwerks"
 version := "0.30-SNAPSHOT"
-scalaVersion := "3.6.4" // Scala 3.7.0-RC3 breaks ScalaFx!
+scalaVersion := "3.6.4" // Scala 3.7.0-RC4 still breaks ScalaFx!
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "23.0.1-R34",
@@ -11,7 +11,9 @@ libraryDependencies ++= {
 }
 scalacOptions ++= Seq(
   "-Wunused:all"
-  // For 3.7.0-RC1 warnings: "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
+  // "-rewrite",
+  // "-source:3.7-migration"
+  // For 3.7.0-RC4 warnings: "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
 )
 outputStrategy := Some(StdoutOutput)
 parallelExecution := false
