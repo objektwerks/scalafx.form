@@ -52,7 +52,7 @@ copyAssemblyJar := {
 // End: Assembly Tasks
 
 // Begin: Assembly
-assemblyJarName := s"scalafx-speech-${version.value}.jar"
+assemblyJarName := s"scala-form-${version.value}.jar"
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF",  xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
