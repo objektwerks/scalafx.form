@@ -1,7 +1,7 @@
 name := "scalafx.form"
 organization := "objektwerks"
 version := "0.30-SNAPSHOT"
-scalaVersion := "3.7.2-RC1" // Scala 3.7.0+ still produces implicit using warnings! See scalacOptions below.
+scalaVersion := "3.7.2-RC1"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "24.0.0-R35",
@@ -11,7 +11,7 @@ libraryDependencies ++= {
 }
 scalacOptions ++= Seq(
   "-Wunused:all",
-  // For 3.7.0+ implicit using warnings:
+  // Silences 3.7.0+ implicit using warnings:
   "-Wconf:msg=Implicit parameters should be provided with a `using` clause:s"
 )
 outputStrategy := Some(StdoutOutput)
