@@ -6,7 +6,7 @@ libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "26.0.0-R38",
     "org.controlsfx" % "controlsfx" % "11.2.1",
-    "ch.qos.logback" % "logback-classic" % "1.5.32"
+    "ch.qos.logback" % "logback-classic" % "1.5.38"
   )
 }
 scalacOptions ++= Seq(
